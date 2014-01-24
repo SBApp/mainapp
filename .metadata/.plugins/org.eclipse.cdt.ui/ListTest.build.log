@@ -1,0 +1,40 @@
+02:24:02 **** Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+cd arm && C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/qmake -spec blackberry-armv7le-qcc ../ListTest.pro CONFIG+=debug_and_release CONFIG+=device
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -x c++-header -c ../precompiled.h -o o.le-v7-g/.obj/ListTest.gch/c++
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/main.o ../src/main.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_ListTest.o o.le-v7-g/.moc/moc_ListTest.cpp
+../src/ListTest.cpp:699:6: warning: unused parameter 'expenseAmount' [-Wunused-parameter]
+../src/ListTest.cpp:699:6: warning: unused parameter 'budgetType' [-Wunused-parameter]
+../src/ListTest.cpp:699:6: warning: unused parameter 'startDate' [-Wunused-parameter]
+../src/ListTest.cpp:699:6: warning: unused parameter 'endDate' [-Wunused-parameter]
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:781:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1325:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+../src/main.cpp:15:6: warning: unused parameter 'type' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/ListTest o.le-v7-g/.obj/ListTest.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ListTest.o    -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+
+02:24:09 Build Finished (took 6s.310ms)
+

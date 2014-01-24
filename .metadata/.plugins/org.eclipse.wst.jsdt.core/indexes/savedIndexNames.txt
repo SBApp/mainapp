@@ -1,0 +1,3 @@
+INDEX VERSION 1.122+C:\Users\DNShark\Documents\SnapBudget\mainapp\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3399372566.index
+555852369.index
