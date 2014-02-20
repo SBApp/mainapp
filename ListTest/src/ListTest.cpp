@@ -203,6 +203,7 @@ QString ListTest::getAccountName() {
 }
 
 void ListTest::deleteAccount(const QString &previousID, int selectedIndex) {
+	clearGraph(); //Must clear before adding so duplicated aren't added.
 	bool foundAccount = false;
 
 	//Delete period file
@@ -421,6 +422,7 @@ void ListTest::setAccount(QVariant selectedAccount) {
 
 	//Checks if the selected account is the current main account
 	if (!(selectedAccount.toMap()["isMain"] == "true")) {
+		clearGraph(); //Must clear before adding so duplicated aren't added.
 		QVariantMap testMap = selectedAccount.toMap();
 		int accountDataIndex = accountList.indexOf(primaryAccount);
 		//Sets selected account
@@ -575,6 +577,7 @@ void ListTest::deleteItemAtIndex(QVariant selectedExpense) {
 void ListTest::addAccount(const QString &accountName,
 		const QString &expenseAmount, const QString &budgetType,
 		const QString &startDate, const QString &endDate) {
+	clearGraph(); //Must clear before adding so duplicated aren't added.
 	//Saves account, which returns a QVariant instance of the account thats is used to set the account
 	setAccount(saveAccount(accountName, true));
 	//Set the budget of the account
@@ -732,6 +735,7 @@ QString ListTest::budgetStartDate() {
 }
 
 void ListTest::newPeriod(QString endDateStr) {
+	clearGraph(); //Must clear before adding so duplicated aren't added.
 	//Notify user of period end
 	float usedAmount = periodMap["budgetUsed"].toFloat();
 	float totalAmount = periodMap["budgetAmount"].toFloat();
@@ -939,7 +943,7 @@ QString ListTest::convertDateNum(QString dateToConvert) {
 void ListTest::addNewRecord(const QString &expenseName, QString expenseAmount,
 		const QString &expenseDate, const QString &expenseCategory,
 		const QString &fullDate) {
-
+	clearGraph(); //Must clear before adding so duplicated aren't added.
 	QString convertedDate = convertDate(expenseDate);
 	QString checkDate = isWithinRange(convertDateNum(convertedDate), periodMap["startDate"].toString(), periodMap["endDate"].toString());
 	QVariantMap newPeriodMap = periodMap;
@@ -1179,6 +1183,10 @@ void ListTest::updateAccountView() {
 
 void ListTest::reloadWebView() {
 	emit reloadWeb();
+}
+
+void ListTest::clearGraph() {
+	emit clearGraphVar();
 }
 
 void ListTest::updateSelectedRecord(const QVariant &selectedItem, QString expenseAmount,

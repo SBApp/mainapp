@@ -22,12 +22,12 @@ static const uint qt_meta_data_ListTest[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      55,   14, // methods
-       2,  289, // properties
+      57,   14, // methods
+       2,  299, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       6,       // signalCount
+       7,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       10,    9,    9,    9, 0x05,
@@ -35,64 +35,66 @@ static const uint qt_meta_data_ListTest[] = {
       55,    9,    9,    9, 0x05,
       73,    9,    9,    9, 0x05,
       85,    9,    9,    9, 0x05,
-     104,    9,    9,    9, 0x05,
+     101,    9,    9,    9, 0x05,
+     120,    9,    9,    9, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     126,    9,    9,    9, 0x0a,
-     138,    9,    9,    9, 0x0a,
+     142,    9,    9,    9, 0x0a,
+     154,    9,    9,    9, 0x0a,
 
  // methods: signature, parameters, type, tag, flags
-     225,  162,    9,    9, 0x02,
-     347,  279,    9,    9, 0x02,
-     426,  410,    9,    9, 0x02,
-     507,  454,    9,    9, 0x02,
-     598,  555,    9,    9, 0x22,
-     696,  641,    9,    9, 0x02,
-     751,  641,    9,    9, 0x02,
-     819,  803,    9,    9, 0x02,
-     860,  840,    9,    9, 0x02,
-     893,  840,    9,    9, 0x02,
-     929,    9,    9,    9, 0x02,
-     939,    9,    9,    9, 0x02,
-     957,    9,    9,    9, 0x02,
-     979,    9,    9,    9, 0x02,
-     999,  840,    9,    9, 0x02,
-    1052, 1038,    9,    9, 0x02,
-    1076,    9,    9,    9, 0x02,
-    1097, 1088,    9,    9, 0x02,
-    1122,    9,    9,    9, 0x02,
-    1139,    9,    9,    9, 0x02,
-    1161, 1156,    9,    9, 0x02,
-    1178,    9,    9,    9, 0x02,
-    1195,    9,    9,    9, 0x02,
-    1231, 1212,    9,    9, 0x02,
-    1291, 1266,    9,    9, 0x02,
-    1329, 1318,    9,    9, 0x02,
-    1360, 1348,    9,    9, 0x02,
-    1406,    9,    9,    9, 0x02,
-    1428,    9,    9,    9, 0x02,
+     241,  178,    9,    9, 0x02,
+     363,  295,    9,    9, 0x02,
+     442,  426,    9,    9, 0x02,
+     523,  470,    9,    9, 0x02,
+     614,  571,    9,    9, 0x22,
+     712,  657,    9,    9, 0x02,
+     767,  657,    9,    9, 0x02,
+     835,  819,    9,    9, 0x02,
+     876,  856,    9,    9, 0x02,
+     909,  856,    9,    9, 0x02,
+     945,    9,    9,    9, 0x02,
+     955,    9,    9,    9, 0x02,
+     973,    9,    9,    9, 0x02,
+     995,    9,    9,    9, 0x02,
+    1015,  856,    9,    9, 0x02,
+    1068, 1054,    9,    9, 0x02,
+    1092,    9,    9,    9, 0x02,
+    1113, 1104,    9,    9, 0x02,
+    1138,    9,    9,    9, 0x02,
+    1155,    9,    9,    9, 0x02,
+    1177, 1172,    9,    9, 0x02,
+    1194,    9,    9,    9, 0x02,
+    1211,    9,    9,    9, 0x02,
+    1247, 1228,    9,    9, 0x02,
+    1307, 1282,    9,    9, 0x02,
+    1345, 1334,    9,    9, 0x02,
+    1376, 1364,    9,    9, 0x02,
+    1422,    9,    9,    9, 0x02,
     1444,    9,    9,    9, 0x02,
-    1456,    9,    9,    9, 0x02,
-    1480,    9,    9,    9, 0x02,
-    1505, 1492,    9,    9, 0x02,
-    1539,    9, 1534,    9, 0x02,
-    1558, 1554, 1534,    9, 0x02,
-    1577,    9, 1534,    9, 0x02,
-    1586,    9, 1534,    9, 0x02,
-    1612,    9, 1604,    9, 0x02,
-    1647, 1629, 1604,    9, 0x02,
-    1673,    9, 1604,    9, 0x22,
-    1692, 1629, 1604,    9, 0x02,
-    1715,    9, 1604,    9, 0x22,
-    1731, 1629, 1604,    9, 0x02,
-    1754,    9, 1604,    9, 0x22,
-    1786, 1770, 1604,    9, 0x02,
-    1829, 1819, 1604,    9, 0x02,
-    1872,    9, 1859,    9, 0x02,
+    1460,    9,    9,    9, 0x02,
+    1473,    9,    9,    9, 0x02,
+    1485,    9,    9,    9, 0x02,
+    1509,    9,    9,    9, 0x02,
+    1534, 1521,    9,    9, 0x02,
+    1568,    9, 1563,    9, 0x02,
+    1587, 1583, 1563,    9, 0x02,
+    1606,    9, 1563,    9, 0x02,
+    1615,    9, 1563,    9, 0x02,
+    1641,    9, 1633,    9, 0x02,
+    1676, 1658, 1633,    9, 0x02,
+    1702,    9, 1633,    9, 0x22,
+    1721, 1658, 1633,    9, 0x02,
+    1744,    9, 1633,    9, 0x22,
+    1760, 1658, 1633,    9, 0x02,
+    1783,    9, 1633,    9, 0x22,
+    1815, 1799, 1633,    9, 0x02,
+    1858, 1848, 1633,    9, 0x02,
+    1901,    9, 1888,    9, 0x02,
 
  // properties: name, type, flags
-    1888, 1604, 0x0a095001,
-    1899, 1604, 0x0a095001,
+    1917, 1633, 0x0a095001,
+    1928, 1633, 0x0a095001,
 
        0        // eod
 };
@@ -100,9 +102,9 @@ static const uint qt_meta_data_ListTest[] = {
 static const char qt_meta_stringdata_ListTest[] = {
     "ListTest\0\0periodChanged(QString)\0"
     "updateGraph(QVariant)\0setAccountGraph()\0"
-    "reloadWeb()\0emptyExpenseList()\0"
-    "notEmptyExpenseList()\0checkDate()\0"
-    "overBudgetDialogClose()\0"
+    "reloadWeb()\0clearGraphVar()\0"
+    "emptyExpenseList()\0notEmptyExpenseList()\0"
+    "checkDate()\0overBudgetDialogClose()\0"
     "expenseName,expenseAmount,expenseDate,expenseCategory,fullDate\0"
     "addNewRecord(QString,QString,QString,QString,QString)\0"
     "selectedIndex,expenseAmount,expenseName,expenseDate,expenseCategory\0"
@@ -133,10 +135,10 @@ static const char qt_meta_stringdata_ListTest[] = {
     "newPeriod(QString)\0date1,date2\0"
     "updatePeriodExpensesListView(QString,QString)\0"
     "loadAccountCreation()\0reloadWebView()\0"
-    "sendEmail()\0setUpAccountListModel()\0"
-    "updateBar()\0excessPeriod\0"
-    "removeExcessPeriod(QVariant)\0bool\0"
-    "loadQMLScene()\0pin\0verifyPin(QString)\0"
+    "clearGraph()\0sendEmail()\0"
+    "setUpAccountListModel()\0updateBar()\0"
+    "excessPeriod\0removeExcessPeriod(QVariant)\0"
+    "bool\0loadQMLScene()\0pin\0verifyPin(QString)\0"
     "hasPin()\0getLockedStatus()\0QString\0"
     "getAccountName()\0selectedAccountID\0"
     "getCurrentBudget(QString)\0getCurrentBudget()\0"
@@ -158,70 +160,72 @@ void ListTest::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 1: _t->updateGraph((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
         case 2: _t->setAccountGraph(); break;
         case 3: _t->reloadWeb(); break;
-        case 4: _t->emptyExpenseList(); break;
-        case 5: _t->notEmptyExpenseList(); break;
-        case 6: _t->checkDate(); break;
-        case 7: _t->overBudgetDialogClose(); break;
-        case 8: _t->addNewRecord((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5]))); break;
-        case 9: _t->updateSelectedRecord((*reinterpret_cast< const QVariant(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5]))); break;
-        case 10: _t->deleteItemAtIndex((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
-        case 11: _t->setBudget((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< bool(*)>(_a[5]))); break;
-        case 12: _t->setBudget((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4]))); break;
-        case 13: _t->createAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5]))); break;
-        case 14: _t->addAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5]))); break;
-        case 15: _t->setAccount((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
-        case 16: _t->updateSumAmount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
-        case 17: _t->updatePinSumAmount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
-        case 18: _t->onStart(); break;
-        case 19: _t->clearAmountText(); break;
-        case 20: _t->clearEditAmountText(); break;
-        case 21: _t->clearBudgetAmount(); break;
-        case 22: _t->updateSumAmountSymbol((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
-        case 23: _t->editAmountText((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 24: _t->createPin(); break;
-        case 25: _t->deletePinAmount((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 26: _t->getCreateLabel(); break;
-        case 27: _t->getVerifyLabel(); break;
-        case 28: _t->lockApp((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 29: _t->fillBudgetPage(); break;
-        case 30: _t->fillAddAccount(); break;
-        case 31: _t->changeAccountName((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
-        case 32: _t->deleteAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 33: _t->newPeriod((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 34: _t->updatePeriodExpensesListView((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
-        case 35: _t->loadAccountCreation(); break;
-        case 36: _t->reloadWebView(); break;
-        case 37: _t->sendEmail(); break;
-        case 38: _t->setUpAccountListModel(); break;
-        case 39: _t->updateBar(); break;
-        case 40: _t->removeExcessPeriod((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
-        case 41: { bool _r = _t->loadQMLScene();
+        case 4: _t->clearGraphVar(); break;
+        case 5: _t->emptyExpenseList(); break;
+        case 6: _t->notEmptyExpenseList(); break;
+        case 7: _t->checkDate(); break;
+        case 8: _t->overBudgetDialogClose(); break;
+        case 9: _t->addNewRecord((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5]))); break;
+        case 10: _t->updateSelectedRecord((*reinterpret_cast< const QVariant(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5]))); break;
+        case 11: _t->deleteItemAtIndex((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
+        case 12: _t->setBudget((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< bool(*)>(_a[5]))); break;
+        case 13: _t->setBudget((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4]))); break;
+        case 14: _t->createAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5]))); break;
+        case 15: _t->addAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5]))); break;
+        case 16: _t->setAccount((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
+        case 17: _t->updateSumAmount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 18: _t->updatePinSumAmount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 19: _t->onStart(); break;
+        case 20: _t->clearAmountText(); break;
+        case 21: _t->clearEditAmountText(); break;
+        case 22: _t->clearBudgetAmount(); break;
+        case 23: _t->updateSumAmountSymbol((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 24: _t->editAmountText((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 25: _t->createPin(); break;
+        case 26: _t->deletePinAmount((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 27: _t->getCreateLabel(); break;
+        case 28: _t->getVerifyLabel(); break;
+        case 29: _t->lockApp((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 30: _t->fillBudgetPage(); break;
+        case 31: _t->fillAddAccount(); break;
+        case 32: _t->changeAccountName((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 33: _t->deleteAccount((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 34: _t->newPeriod((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 35: _t->updatePeriodExpensesListView((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 36: _t->loadAccountCreation(); break;
+        case 37: _t->reloadWebView(); break;
+        case 38: _t->clearGraph(); break;
+        case 39: _t->sendEmail(); break;
+        case 40: _t->setUpAccountListModel(); break;
+        case 41: _t->updateBar(); break;
+        case 42: _t->removeExcessPeriod((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
+        case 43: { bool _r = _t->loadQMLScene();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 42: { bool _r = _t->verifyPin((*reinterpret_cast< const QString(*)>(_a[1])));
+        case 44: { bool _r = _t->verifyPin((*reinterpret_cast< const QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 43: { bool _r = _t->hasPin();
+        case 45: { bool _r = _t->hasPin();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 44: { bool _r = _t->getLockedStatus();
+        case 46: { bool _r = _t->getLockedStatus();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 45: { QString _r = _t->getAccountName();
+        case 47: { QString _r = _t->getAccountName();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 46: { QString _r = _t->getCurrentBudget((*reinterpret_cast< const QString(*)>(_a[1])));
+        case 48: { QString _r = _t->getCurrentBudget((*reinterpret_cast< const QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 47: { QString _r = _t->getCurrentBudget();
+        case 49: { QString _r = _t->getCurrentBudget();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 48: { QString _r = _t->getUsedBudget((*reinterpret_cast< const QString(*)>(_a[1])));
+        case 50: { QString _r = _t->getUsedBudget((*reinterpret_cast< const QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 49: { QString _r = _t->getUsedBudget();
+        case 51: { QString _r = _t->getUsedBudget();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 50: { QString _r = _t->getBudgetType((*reinterpret_cast< const QString(*)>(_a[1])));
+        case 52: { QString _r = _t->getBudgetType((*reinterpret_cast< const QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 51: { QString _r = _t->getBudgetType();
+        case 53: { QString _r = _t->getBudgetType();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 52: { QString _r = _t->addDigitToValue((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])));
+        case 54: { QString _r = _t->addDigitToValue((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 53: { QString _r = _t->deleteDigitFromValue((*reinterpret_cast< QString(*)>(_a[1])));
+        case 55: { QString _r = _t->deleteDigitFromValue((*reinterpret_cast< QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 54: { QVariantList _r = _t->getValueArray();
+        case 56: { QVariantList _r = _t->getValueArray();
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = _r; }  break;
         default: ;
         }
@@ -260,9 +264,9 @@ int ListTest::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 55)
+        if (_id < 57)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 55;
+        _id -= 57;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {
@@ -318,14 +322,20 @@ void ListTest::reloadWeb()
 }
 
 // SIGNAL 4
-void ListTest::emptyExpenseList()
+void ListTest::clearGraphVar()
 {
     QMetaObject::activate(this, &staticMetaObject, 4, 0);
 }
 
 // SIGNAL 5
-void ListTest::notEmptyExpenseList()
+void ListTest::emptyExpenseList()
 {
     QMetaObject::activate(this, &staticMetaObject, 5, 0);
+}
+
+// SIGNAL 6
+void ListTest::notEmptyExpenseList()
+{
+    QMetaObject::activate(this, &staticMetaObject, 6, 0);
 }
 QT_END_MOC_NAMESPACE

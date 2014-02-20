@@ -46,6 +46,7 @@ NavigationPane {
 	                        //Connect the updateGraph signal called whenever the periods are modified to updating the graph and regenerating it
 					        budgetApp.updateGraph.connect(updateGraph)
 					        budgetApp.reloadWeb.connect(reloadWebView)
+					        budgetApp.clearGraphVar.connect(clearGraph)
 					        console.log("Finished getting data, sending Json array.")   
 					        sendWebViewMessage()
 	                    } else if (loadRequest.status == WebLoadStatus.Failed) {
@@ -81,9 +82,7 @@ NavigationPane {
 				                         console.log("reportItem.name: " + reportItem.budgetType);
 				                         //var indexP = (indexPath.length == 1) ? indexPath : indexPath[1]
 				                         console.log("size: " + size());
-				                         //Clear graphDataArray when ListView reloads. (Ex: Setting different account)
-				                         if (size() == 1) 
-				                             graphDataArray = ""
+				                         
 				                         if(size() > 0 && size() < 7) {
 				                             console.log("Attempting to add to array")
 				                             var qGraphMap = {}
@@ -187,6 +186,11 @@ NavigationPane {
 		       
 		   }
 	   }
+   }
+   
+   function clearGraph() {
+       //Clears data when adding new item and switching accounts
+       graphDataArray = "";
    }
    
    function updateGraph(updatedMap) {

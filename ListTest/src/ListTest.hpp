@@ -80,6 +80,7 @@ public:
     Q_INVOKABLE void updatePeriodExpensesListView(const QString &date1, const QString &date2);
     Q_INVOKABLE void loadAccountCreation();
     Q_INVOKABLE void reloadWebView();
+    Q_INVOKABLE void clearGraph();
     Q_INVOKABLE void sendEmail();
     Q_INVOKABLE void setUpAccountListModel();
     Q_INVOKABLE void updateBar();
@@ -197,6 +198,7 @@ signals:
 	void updateGraph(QVariant);
 	void setAccountGraph();
 	void reloadWeb();
+	void clearGraphVar();
 	void emptyExpenseList();
 	void notEmptyExpenseList();
 
