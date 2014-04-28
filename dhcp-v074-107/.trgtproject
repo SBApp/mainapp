@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<trgtproject id="com.qnx.tools.ide.target.core.target">
+    <data>
+        <item id="com.qnx.tools.ide.target">
+            <qconnport value="8000"/>
+            <qconnguid value="6273eb78-fe89-4e3e-a42e-46b7883c6c59"/>
+            <qconnostype value="nto"/>
+            <conn-type value="WIFI"/>
+            <qconnhostname value="dhcp-v074-107.mobile.uci.edu"/>
+            <project>
+                <name value="dhcp-v074-107"/>
+            </project>
+            <targettmpdir value="/var/tmp"/>
+            <last-device value="0x2AB29F9B"/>
+        </item>
+    </data>
+</trgtproject>
