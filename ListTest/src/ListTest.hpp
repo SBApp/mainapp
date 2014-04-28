@@ -131,7 +131,7 @@ public:
     void setUpPeriodExpensesListModel();
     void setUpPeriodListModel();
     void setUpAccountModel();
-    void setPeriod(const QString &startDate, const QString &endDate);
+    void setPeriod(const QString &startDate, const QString &endDate, bool convert = true);
     void updatePeriodView();
     void fastUpdateListView();
     void updateListView();
@@ -144,11 +144,13 @@ public:
     void reformatPreviousPeriods(const QString &expenseAmount,
     		const QString &budgetType, const QString &startDate,
     		const QString &endDate);
-    void fillPreviousPeriods(QVariantList& pList, const QString &expenseAmount,
+    void fillPreviousPeriods(QString expenseAmount,
     		const QString &budgetType, const QString &startDate,
-    		const QString &endDate); //Recursive function
+    		const QString &endDate, bool firstCall = false); //Recursive function
     void recalcBudget();
     QDate getNewStartDate(QDate oldStartDate);
+    QDate getPreviousEndDate(const QString& prevStartDate);
+    QDate getPreviousStartDate(const QString& prevStartDate, const QString& periodType);
     QVariantList expenseList;
     QVariantList periodList;
     QVariantList accountList;

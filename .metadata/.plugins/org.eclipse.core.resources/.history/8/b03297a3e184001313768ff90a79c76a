@@ -1,9 +1,0 @@
-eclipse.preferences.version=1
-environment/project/com.qnx.qcc.toolChain.1157385747/CPULIST/delimiter=,
-environment/project/com.qnx.qcc.toolChain.1157385747/CPULIST/operation=append
-environment/project/com.qnx.qcc.toolChain.1157385747/CPULIST/value=arm
-environment/project/com.qnx.qcc.toolChain.1157385747/VARIANTLIST/delimiter=,
-environment/project/com.qnx.qcc.toolChain.1157385747/VARIANTLIST/operation=append
-environment/project/com.qnx.qcc.toolChain.1157385747/VARIANTLIST/value=g
-environment/project/com.qnx.qcc.toolChain.1157385747/append=true
-environment/project/com.qnx.qcc.toolChain.1157385747/appendContributed=true

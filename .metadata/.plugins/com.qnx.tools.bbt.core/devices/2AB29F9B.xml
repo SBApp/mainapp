@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <device>
-    <hardware-model-full>BlackBerry Z10</hardware-model-full>
+    <os-version>10.2.1.2228</os-version>
     <hardware-model>Z10</hardware-model>
-    <os-version>10.2.1.1055</os-version>
+    <hardware-model-full>BlackBerry Z10</hardware-model-full>
     <hardware-type>PRODUCTION</hardware-type>
     <device-pin>0x2AB29F9B</device-pin>
     <hardware-family>Touch</hardware-family>

@@ -147,7 +147,7 @@ QVariantList ListTest::getValueArray() {
 	return qList;
 }
 
-//Return larger date
+//Return larger (later) date
 QString ListTest::compareDates(QString date1, QString date2) {
 	//qDebug() << "Today's date: " + date1 + " End date: " + date2;
 	QStringList date1List = date1.split(".");
@@ -209,7 +209,7 @@ void ListTest::deleteAccount(const QString &previousID, int selectedIndex) {
 	//Delete period file
 	QFile file(
 			QDir::homePath() + QString("/user/period_") + previousID
-					+ QString(".json"));
+			+ QString(".json"));
 	if (file.exists()) {
 		if (file.remove()) {
 			foundAccount = true;
@@ -219,12 +219,12 @@ void ListTest::deleteAccount(const QString &previousID, int selectedIndex) {
 	QVariant selectedAccount;
 
 	foreach (QVariant it, accountList){
-	QVariantMap iterateAccount = it.toMap();
-	if (iterateAccount["accountID"] == previousID) {
-		selectedAccount = iterateAccount;
-		break;
+		QVariantMap iterateAccount = it.toMap();
+		if (iterateAccount["accountID"] == previousID) {
+			selectedAccount = iterateAccount;
+			break;
+		}
 	}
-}
 	if (foundAccount) {
 		QVariantMap selectedMap = selectedAccount.toMap();
 		int accountDataIndex = accountList.indexOf(selectedMap);
@@ -280,15 +280,15 @@ void ListTest::changeAccountName(const QString &previousID,
 
 	accountList =
 			jda.load(QDir::homePath() + QString("/user/accountinfo.json")).value<
-					QVariantList>();
+			QVariantList>();
 
 	foreach (QVariant it, accountList){
-	QVariantMap iterateAccount = it.toMap();
-	if (iterateAccount["accountID"] == previousID) {
-		selectedAccount = iterateAccount;
-		break;
+		QVariantMap iterateAccount = it.toMap();
+		if (iterateAccount["accountID"] == previousID) {
+			selectedAccount = iterateAccount;
+			break;
+		}
 	}
-}
 	QVariantMap selectedMap = selectedAccount.toMap();
 	int accountDataIndex = accountList.indexOf(selectedMap);
 	selectedMap["accountName"] = newName;
@@ -305,8 +305,8 @@ QString ListTest::getCurrentBudget(const QString &selectedAccountID) {
 	if (selectedAccountID != "") {
 		QVariantList tempPeriodList = jda.load(
 				QDir::homePath() + QString("/user/period") + QString("_")
-						+ selectedAccountID + QString(".json")).value<
-				QVariantList>();
+				+ selectedAccountID + QString(".json")).value<
+						QVariantList>();
 		QVariant selectedPeriod = getPeriodOf(tempPeriodList);
 		QVariantMap selectedPeriodMap = selectedPeriod.toMap();
 		return selectedPeriodMap["budgetAmount"].toString();
@@ -319,8 +319,8 @@ QString ListTest::getUsedBudget(const QString &selectedAccountID) {
 	if (selectedAccountID != "") {
 		QVariantList tempPeriodList = jda.load(
 				QDir::homePath() + QString("/user/period") + QString("_")
-						+ selectedAccountID + QString(".json")).value<
-				QVariantList>();
+				+ selectedAccountID + QString(".json")).value<
+						QVariantList>();
 		QVariant selectedPeriod = getPeriodOf(tempPeriodList);
 		QVariantMap selectedPeriodMap = selectedPeriod.toMap();
 		return selectedPeriodMap["budgetUsed"].toString();
@@ -347,8 +347,8 @@ bool ListTest::verifyPin(const QString &pin) {
 
 	qDebug() << "Verifying pin...";
 	qDebug()
-			<< QString("Is ") + pin + QString(" equal to ")
-					+ settings.value("pin").toString();
+	<< QString("Is ") + pin + QString(" equal to ")
+	+ settings.value("pin").toString();
 
 	if (pin == settings.value("pin").toString()) {
 		qDebug() << "Correct pin, access granted!";
@@ -475,7 +475,7 @@ void ListTest::setAccount(QVariant selectedAccount) {
 void ListTest::savePeriods() {
 	jda.save(periodList,
 			QDir::homePath() + "/user/period" + "_"
-					+ accountMap["accountID"].toString() + ".json");
+			+ accountMap["accountID"].toString() + ".json");
 
 	if (jda.hasError()) {
 		// Retrieve the error
@@ -496,8 +496,8 @@ void ListTest::savePeriods() {
 
 void ListTest::saveExpenses() {
 	jda.save(expenseList,
-				QDir::homePath() + "/user/expenses" + "_"
-						+ accountMap["accountID"].toString() + ".json");
+			QDir::homePath() + "/user/expenses" + "_"
+			+ accountMap["accountID"].toString() + ".json");
 	if (jda.hasError()) {
 		// Retrieve the error
 		DataAccessError theError = jda.error();
@@ -519,10 +519,10 @@ void ListTest::saveJson() {
 	jda.save(accountList, QDir::homePath() + "/user/accountinfo.json");
 	jda.save(periodList,
 			QDir::homePath() + "/user/period" + "_"
-					+ accountMap["accountID"].toString() + ".json");
+			+ accountMap["accountID"].toString() + ".json");
 	jda.save(expenseList,
 			QDir::homePath() + "/user/expenses" + "_"
-					+ accountMap["accountID"].toString() + ".json");
+			+ accountMap["accountID"].toString() + ".json");
 
 	if (jda.hasError()) {
 		// Retrieve the error
@@ -557,7 +557,7 @@ void ListTest::deleteItemAtIndex(QVariant selectedExpense) {
 
 	//Modify budget in period
 	float newAmount = periodMap["budgetUsed"].toFloat()
-			- expenseMap["amount"].toFloat();
+													- expenseMap["amount"].toFloat();
 	QString qNewAmount;
 	qNewAmount.sprintf("%.2f", newAmount);
 	periodMap["budgetUsed"] = qNewAmount;
@@ -608,40 +608,45 @@ void ListTest::setBudget(const QString &expenseAmount,
 
 	//Get index of period
 	int periodIndex = periodList.indexOf(periodMap);
+	//Set period
+	setPeriod(startDate, endDate);
 
 	if (!firstTime) {
 		if (periodMap["budgetType"].toString() == budgetType)
 		{
+			periodMap["budgetAmount"] = expenseAmountS;
 			//Same budget type, no need to worry about changing everything
 			qDebug() << "Same budget type!";
+			//Check if any previous periods exist
+			if (periodList.count() > 0) {
+				periodList.replace(periodIndex, periodMap);
+			} else {
+				periodList.insert(0, periodMap);
+			}
+			addPeriodExpenses(); //Updates period list according to period type
 		}
 		else
 		{
 			//Need to worry about changing everything!
 			qDebug() << "Different budget type!";
-			//reformatPreviousPeriods(expenseAmount, budgetType, startDate,
-			//		endDate);
-			//Update spent and
+			//Updates previous periods
+			reformatPreviousPeriods(expenseAmountS, budgetType, startDate, endDate);
 		}
-		periodMap["budgetType"] = budgetType;
-		periodMap["budgetAmount"] = expenseAmountS;
 	} else {
 		periodMap["budgetType"] = budgetType;
 		periodMap["budgetAmount"] = expenseAmountS;
 		periodMap["budgetUsed"] = "0.00";
 		periodMap["expenses"] = emptyList;
+
+		//Check if any previous periods exist
+		if (periodList.count() > 0) {
+			periodList.replace(periodIndex, periodMap);
+		} else {
+			periodList.insert(0, periodMap);
+		}
+		addPeriodExpenses(); //Updates period list according to period type
 	}
 
-	//Set period
-	setPeriod(startDate, endDate);
-
-	//Check if any previous periods exist
-	if (periodList.count() > 0) {
-		periodList.replace(periodIndex, periodMap);
-	} else {
-		periodList.insert(0, periodMap);
-	}
-	addPeriodExpenses(); //Updates period list according to period type
 	savePeriods(); //Save period list
 
 	if (!firstTime) {
@@ -666,19 +671,23 @@ void ListTest::recalcBudget()
 	}
 }
 
-void ListTest::setPeriod(const QString &startDate, const QString &endDate) {
-	//The end date of the budget will be the sorting ranks
-	//Convert months to full name
-	QString convertedDate = convertDate(endDate);
-	QString convertedStartDate = convertDate(startDate);
+void ListTest::setPeriod(const QString &startDate, const QString &endDate, bool convert) {
+	QString convertedDate;
+	QString convertedStartDate;
+	if (convert) {
+		//The end date of the budget will be the sorting ranks
+		//Convert months to full name
+		convertedDate = convertDate(endDate);
+		convertedStartDate = convertDate(startDate);
+	}
 
 	//Set period start and end dates
-	periodMap["startDate"] = toNumDate(convertedStartDate);
-	periodMap["endDate"] = toNumDate(convertedDate);
+	periodMap["startDate"] = convert ? toNumDate(convertedStartDate) : startDate;
+	periodMap["endDate"] = convert ? toNumDate(convertedDate) : endDate;
 	//Using start date, can change back to convertedDate if it doesn't work
-	periodMap["yearRank"] = rankItemYear(convertedStartDate);
-	periodMap["dayRank"] = rankItemDay(convertedStartDate);
-	periodMap["monthRank"] = rankItemMonth(convertedStartDate);
+	periodMap["yearRank"] = convert ? rankItemYear(convertedStartDate) : rankItemYear(startDate, ".");
+	periodMap["dayRank"] = convert ? rankItemDay(convertedStartDate) : rankItemDay(startDate, ".");
+	periodMap["monthRank"] = convert ? rankItemMonth(convertedStartDate) : rankItemMonth(startDate, ".");
 	periodMap["isMain"] = "true";
 }
 
@@ -687,43 +696,81 @@ void ListTest::reformatPreviousPeriods(const QString &expenseAmount,
 		const QString &endDate)
 {
 	QVariantList reformatedPeriodList;
-	QVariantMap oldMap = periodMap; //May need to just refresh periodMap when you create new list
 	//Caller (setBudget) should deal with current period, you are only
 	//	dealing with the previous periods
-	//Fill all periods
-	fillPreviousPeriods(reformatedPeriodList,expenseAmount,budgetType,
-			startDate,endDate);
+//Clear periodList
+	QVariantList emptyList;
+	periodList = emptyList;
 
-	//Save all periods
-	periodList = reformatedPeriodList; // Temp
-	periodMap = oldMap;
+	//Fill all previous periods
+	QString cStartDate = toNumDate(convertDate(startDate));
+	QString cEndDate = toNumDate(convertDate(endDate));
+	fillPreviousPeriods(expenseAmount,budgetType,cStartDate,cEndDate, true);
+
+	//Sets periodMap to current selected period
+	QVariant primaryPeriod = getPrimaryPeriod();
+	periodMap = primaryPeriod.toMap();
+	qDebug() << "Got to the end";
 }
 
-void ListTest::fillPreviousPeriods(QVariantList& pList, const QString &expenseAmount,
+void ListTest::fillPreviousPeriods(QString expenseAmount,
 		const QString &budgetType, const QString &startDate,
-		const QString &endDate)
+		const QString &endDate, bool firstCall)
 {
-	QVariant cPeriod;
-	periodMap = cPeriod.toMap();
-	periodMap["budgetAmount"] = ((periodList.first().toMap())["budgetAmount"]).toString();
-	periodList.pop_back();
-	qDebug() << "periodMap[budgetAmount]: " << periodMap["budgetAmount"].toString();
-	qDebug() << "periodList count: " << periodList.count();
-	pList.insert(0, cPeriod);
-	//Take expenseAmount out, I don't think we will need it
-	//Also these values should be updated to the new period and passed through
-	//or else there is no point to this
-	//if-> updated start date is NOT earlier than earlist recorded period startDate (old)
-	//fillPreviousPeriods(cList,expenseAmount,budgetType,startDate,endDate);
-	/*
-	QVariantList::iterator iter;
-	for (iter = periodList.begin(); iter != periodList.end(); iter++)
-	{
-		QVariantMap pMap = iter->toMap();
-		qDebug() << "Iterating through periodList";
-		qDebug() << "Iter[budgetAmount]: " << pMap["budgetAmount"].toString();
+	qDebug() << "Make sure the date is in the correct format, MM.DD.YYYY";
+	qDebug() << "startDate: " << startDate;
+	QVariantMap blankMap;
+	periodMap = blankMap;
+	periodMap["budgetAmount"] = expenseAmount;
+	periodMap["budgetType"] = budgetType;
+	qDebug() << "Past declaring periodMap attributes";
+	setPeriod(startDate, endDate, false);
+	if (!firstCall) periodMap["isMain"] = "false"; //So only the first period is main
+	qDebug() << "Past setPeriod";
+	periodList.insert(0,periodMap);
+	qDebug() << "OG periodList index: " << periodList.indexOf((periodMap));
+	qDebug() << "Past periodList.insert";
+	addPeriodExpenses();
+	qDebug() << "Past addPeriodExpenses";
+
+	if (!expenseList.empty()) {
+		qDebug() << "Inside if";
+		//Get earliest expense date
+		QVariantList::iterator iter = expenseList.begin();
+		qDebug() << "After iter";
+		qDebug () << "iterdated: " << iter->toMap()["dated"].toString();
+		//QStringList expenseDateList = toNumDate(iter->toMap()["dated"].toString()).split(" ");
+		//qDebug() << "After expenseDateList";
+		//QString earliestExpense = rankItemMonth(expenseDateList[0], true) + "." + expenseDateList[1] + "." + expenseDateList[2];
+		QString earliestExpense = toNumDate(iter->toMap()["dated"].toString());
+		qDebug() << "earliestExpense: " << earliestExpense;
+		qDebug() << "before for";
+		for (; iter != expenseList.end(); iter++) {
+			qDebug() << "Inside for";
+			QVariantMap expense = iter->toMap();
+			//QStringList selectedDateList = convertDate(expense["dated"].toString()).split(" ");
+			//QString currentExpense = rankItemMonth(selectedDateList[0], true) + "." + selectedDateList[1] + "." + selectedDateList[2];
+			QString currentExpense = toNumDate(expense["dated"].toString());
+			qDebug() << "currentExpense: " << currentExpense;
+			qDebug() << "after currentExpense";
+			if (compareDates(currentExpense,earliestExpense) == earliestExpense) {
+				earliestExpense = currentExpense;
+			}
+			qDebug() << "End of for";
+		}
+		qDebug() << "After for";
+		//Check if need to fillPreviousPeriod
+		//Compare start date with earlistExpense date. If earliest expense date is less, call recursion
+		if (compareDates(startDate, earliestExpense) == startDate) {
+			qDebug() << "Inside second if";
+			qDebug() << "budgetType: " << budgetType;
+			qDebug() << "PreviousStartDate: " << getPreviousStartDate(startDate, budgetType).toString("MM.dd.yyyy");
+			qDebug() << "PreviousEndDate: " << getPreviousEndDate(startDate).toString("MM.dd.yyyy");
+			fillPreviousPeriods(expenseAmount, budgetType, getPreviousStartDate(startDate, budgetType).toString("MM.dd.yyyy"), getPreviousEndDate(startDate).toString("MM.dd.yyyy"));
+			qDebug() << "After fillPreviousPeriods";
+		}
 	}
-	*/
+	qDebug() << "End of function";
 }
 
 QString ListTest::budgetType() {
@@ -747,8 +794,8 @@ void ListTest::newPeriod(QString endDateStr) {
 		dialog->setTitle("Your period is complete!");
 		dialog->setBody(
 				"Amount over budget: $"
-						+ QString::number((-1) * differenceStr.toFloat())
-						+ "\n\nReview your spendings in the reports page and see what you can cut down on!");
+				+ QString::number((-1) * differenceStr.toFloat())
+		+ "\n\nReview your spendings in the reports page and see what you can cut down on!");
 
 		bool success = connect(dialog,
 				SIGNAL(finished(bb::system::SystemUiResult::Type)), this,
@@ -762,7 +809,7 @@ void ListTest::newPeriod(QString endDateStr) {
 		dialog->setTitle("Your period is complete!");
 		dialog->setBody(
 				"Amount saved: $" + QString::number(difference)
-						+ "\n\nGreat job, keep it up!");
+		+ "\n\nGreat job, keep it up!");
 
 		bool success = connect(dialog,
 				SIGNAL(finished(bb::system::SystemUiResult::Type)), this,
@@ -862,8 +909,8 @@ QString ListTest::getBudgetType(const QString &selectedAccountID) {
 	if (selectedAccountID != "") {
 		QVariantList tempPeriodList = jda.load(
 				QDir::homePath() + QString("/user/period") + QString("_")
-						+ selectedAccountID + QString(".json")).value<
-				QVariantList>();
+				+ selectedAccountID + QString(".json")).value<
+						QVariantList>();
 		QVariant selectedPeriod = getPeriodOf(tempPeriodList);
 		QVariantMap selectedPeriodMap = selectedPeriod.toMap();
 		return selectedPeriodMap["budgetType"].toString();
@@ -876,13 +923,46 @@ QVariant ListTest::getPeriodOf(QVariantList selectedPeriodList) {
 	QVariant returnPeriod;
 
 	foreach (QVariant it, selectedPeriodList){
-	QVariantMap selectedPeriod = it.toMap();
-	if (selectedPeriod["isMain"] == "true") {
-		returnPeriod = selectedPeriod;
-		break;
+		QVariantMap selectedPeriod = it.toMap();
+		if (selectedPeriod["isMain"] == "true") {
+			returnPeriod = selectedPeriod;
+			break;
+		}
 	}
-}
 	return returnPeriod;
+}
+
+QDate ListTest::getPreviousEndDate(const QString& prevStartDate) {
+	QStringList strPrevDate = prevStartDate.split(".");
+	QDate cPrevStartDate = QDate(strPrevDate[2].toInt(), strPrevDate[0].toInt(), strPrevDate[1].toInt());
+	QDate endDate = cPrevStartDate.addDays(-1);
+
+	return endDate;
+}
+
+QDate ListTest::getPreviousStartDate(const QString& prevStartDate, const QString& periodType) {
+	QStringList strPrevDate = prevStartDate.split(".");
+	QDate cPrevStartDate = QDate(strPrevDate[2].toInt(), strPrevDate[0].toInt(), strPrevDate[1].toInt());
+	QDate returnDate = cPrevStartDate;
+
+	if (periodType == "monthly") {
+		qDebug() << "Goes in monthly";
+		returnDate = returnDate.addMonths(-1);
+	} else if (periodType == "weekly") {
+		qDebug() << "Goes in weekly";
+		returnDate = returnDate.addDays(-7);
+	} else if (periodType == "yearly") {
+		qDebug() << "Goes in yearly";
+		returnDate = returnDate.addYears(-1);
+	} else if (periodType == "biweekly") {
+		qDebug() << "Goes in biweekly";
+		returnDate = returnDate.addDays(-14);
+	} else if (periodType == "daily") {
+		qDebug() << "Goes in daily";
+		returnDate = returnDate.addDays(-1);
+	}
+	qDebug() << "inside function: " << returnDate.toString("MM.dd.yyyy");
+	return returnDate;
 }
 
 QDate ListTest::getNewStartDate(QDate oldStartDate) {
@@ -1056,8 +1136,8 @@ void ListTest::addNewRecord(const QString &expenseName, QString expenseAmount,
 
 void ListTest::fastUpdateListView() {
 	expenseList = jda.load( QDir::homePath() + QString("/user/expenses") + QString("_")
-									+ accountMap["accountID"].toString()
-									+ QString(".json")).value<QVariantList>();
+			+ accountMap["accountID"].toString()
+			+ QString(".json")).value<QVariantList>();
 	QVariantList currentExpenseList = periodMap["expenses"].toList();
 	if (currentExpenseList.count() == 0) {
 		emit emptyExpenseList();
@@ -1070,8 +1150,8 @@ void ListTest::fastUpdateListView() {
 
 void ListTest::updateListView() {
 	expenseList = jda.load( QDir::homePath() + QString("/user/expenses") + QString("_")
-								+ accountMap["accountID"].toString()
-								+ QString(".json")).value<QVariantList>();
+			+ accountMap["accountID"].toString()
+			+ QString(".json")).value<QVariantList>();
 	//Emit emptyExpenseList that will be caught by ListView in Transactions.qml
 	//In order to put a placeholder to encourage adding an expense
 	if (expenseList.count() == 0) {
@@ -1089,18 +1169,19 @@ void ListTest::updatePeriodExpensesListView(const QString &date1,
 	QVariant returnPeriod;
 
 	foreach (QVariant it, periodList){
-	QVariantMap selectedPeriod = it.toMap();
-	if ((selectedPeriod["startDate"].toString() == date1) && (selectedPeriod["endDate"].toString() == date2)) {
-		returnPeriod = selectedPeriod;
-		break;
+		QVariantMap selectedPeriod = it.toMap();
+		if ((selectedPeriod["startDate"].toString() == date1) && (selectedPeriod["endDate"].toString() == date2)) {
+			returnPeriod = selectedPeriod;
+			break;
+		}
 	}
-}
 	QVariantList periodExpenseList = returnPeriod.toMap()["expenses"].toList();
 
 	periodExpensesListView = tabbedPane->findChild<ListView*>(
 			"periodExpensesListView");
 	periodExpensesListView->setDataModel(periodExpensesModel);
 	periodExpensesModel->clear();
+
 	periodExpensesModel->insertList(periodExpenseList);
 }
 
@@ -1125,6 +1206,7 @@ bool ListTest::addToPreviousPeriod(QVariantMap expenseMap) {
 
 void ListTest::addPeriodExpenses() {
 	QVariantList filteredList;
+	int periodIndex = periodList.indexOf(periodMap);
 
 	foreach (QVariant it, expenseList) {
 		QVariantMap selectedExpense = it.toMap();
@@ -1135,9 +1217,11 @@ void ListTest::addPeriodExpenses() {
 		}
 	}
 
-	int periodIndex = periodList.indexOf(periodMap);
+	qDebug() << "periodIndex: " << periodIndex;
+	qDebug() << "periodList count: " << periodList.count();
 	periodMap["expenses"] = filteredList;
 	recalcBudget();
+	qDebug() << "After recalcBudget";
 	periodList.replace(periodIndex,periodMap);
 }
 
@@ -1165,8 +1249,8 @@ void ListTest::updatePeriodView() {
 	periodList =
 			jda.load(
 					QDir::homePath() + QString("/user/period") + QString("_")
-							+ accountMap["accountID"].toString()
-							+ QString(".json")).value<QVariantList>();
+					+ accountMap["accountID"].toString()
+					+ QString(".json")).value<QVariantList>();
 
 	//Set the periods QVariantMap
 	QVariant primaryPeriod = getPrimaryPeriod();
@@ -1212,7 +1296,7 @@ void ListTest::updateSelectedRecord(const QVariant &selectedItem, QString expens
 	expenseList.replace(itemDataIndex, expenseMap);
 
 	float newAmount = periodMap["budgetUsed"].toFloat()
-			+ (expenseAmount.toFloat() - previousAmount);
+													+ (expenseAmount.toFloat() - previousAmount);
 	QString qNewAmount;
 	qNewAmount.sprintf("%.2f", newAmount);
 	periodMap["budgetUsed"] = qNewAmount;
@@ -1254,7 +1338,7 @@ void ListTest::updateSumAmount(const QString &keyPressed, const QString &fromPag
 		budgetField->setText("$" + amountText);
 	}
 }
-*/
+ */
 
 QString ListTest::addDigitToValue(QString fullValue, QString digit) {
 	qDebug() << "Before adding: " + fullValue;
@@ -1279,7 +1363,7 @@ QString ListTest::addDigitToValue(QString fullValue, QString digit) {
 			fullValue.insert((fullValue.length()-2) - (3*(x+1)) + x,",");
 		}
 	}
-	*/
+	 */
 
 	fullValue.insert(fullValue.length()-2,'.');
 	fullValue.insert(0,'$');
@@ -1306,7 +1390,7 @@ QString ListTest::deleteDigitFromValue(QString fullValue) {
 			//Algorithm for inserting commas
 			fullValue.insert((fullValue.length()-2) - (3*(x+1)) + x,",");
 		}
-	*/
+	 */
 
 	fullValue.insert(fullValue.length()-2,'.');
 	fullValue.insert(0,'$');
@@ -1348,7 +1432,7 @@ void ListTest::updateSumAmount(const QString &keyPressed,
 	amountText = QString::number(currentAmount, 'f', 2);
 	//amountText = QLocale(QLocale::English).toString(currentAmount);
 	qDebug() << "amountText: " + amountText;
-	*/
+	 */
 
 	if (fromPage == "addPage") {
 		amountLabel->setText("$");
@@ -1457,7 +1541,7 @@ QVariant ListTest::saveAccount(const QString &accountNameField,
 		bool firstTime) {
 	accountList =
 			jda.load(QDir::homePath() + QString("/user/accountinfo.json")).value<
-					QVariantList>();
+			QVariantList>();
 
 	if (accountList.empty()) {
 		incrementingAccountID = "0";
@@ -1481,10 +1565,10 @@ QVariant ListTest::saveAccount(const QString &accountNameField,
 	QVariantList emptyList;
 	jda.save(emptyList,
 			QDir::homePath() + QString("/user/period") + QString("_")
-					+ accountMap["accountID"].toString() + QString(".json"));
+			+ accountMap["accountID"].toString() + QString(".json"));
 	jda.save(emptyList,
-				QDir::homePath() + QString("/user/expenses") + QString("_")
-						+ accountMap["accountID"].toString() + QString(".json"));
+			QDir::homePath() + QString("/user/expenses") + QString("_")
+			+ accountMap["accountID"].toString() + QString(".json"));
 
 	saveAccountJson();
 	if (!firstTime) {
@@ -1546,8 +1630,8 @@ void ListTest::updateBar() {
 			dialog->setTitle("Slow Down your spendings!");
 			dialog->setBody(
 					"Amount over budget: $"
-							+ QString::number((-1) * differenceStr.toFloat())
-							+ "\n\nTry to limit your spendings until the end of this period.");
+					+ QString::number((-1) * differenceStr.toFloat())
+			+ "\n\nTry to limit your spendings until the end of this period.");
 
 			bool success = connect(dialog,
 					SIGNAL(finished(bb::system::SystemUiResult::Type)), this,
@@ -1722,7 +1806,7 @@ QString ListTest::fixForConversion(const QString &changeDate) {
 
 	//The placeholder is because convertDate ignores the first element in the QStringList
 	return QString("placeholder") + " " + dateArray[0] + " " + dateArray[1]
-			+ " " + dateArray[2];
+	                                                                     + " " + dateArray[2];
 }
 
 QString ListTest::convertDate(const QString &prevDate) {
@@ -1765,7 +1849,7 @@ void ListTest::setUpAccountModel() {
 	if (file.exists()) {
 		accountList = jda.load(
 				QDir::homePath() + QString("/user/accountinfo.json")).value<
-				QVariantList>();
+						QVariantList>();
 	} else {
 		QDir dir;
 		dir.mkpath(QDir::homePath() + QString("/user"));
@@ -1810,12 +1894,12 @@ QVariant ListTest::getPrimaryAccount() {
 	QVariant returnAccount;
 
 	foreach (QVariant it, accountList){
-	QVariantMap selectedAccount = it.toMap();
-	if (selectedAccount["isMain"] == "true") {
-		returnAccount = selectedAccount;
-		break;
+		QVariantMap selectedAccount = it.toMap();
+		if (selectedAccount["isMain"] == "true") {
+			returnAccount = selectedAccount;
+			break;
+		}
 	}
-}
 	return returnAccount;
 }
 
@@ -1892,11 +1976,11 @@ void ListTest::setUpPeriodListModel() {
 	QStringList sortingKey;
 	sortingKey << "isMain" << "yearRank" << "monthRank" << "dayRank";
 	periodList = jda.load(QDir::homePath() + QString("/user/period") + QString("_")
-					+ accountMap["accountID"].toString()
-					+ QString(".json")).value<QVariantList>();
+			+ accountMap["accountID"].toString()
+			+ QString(".json")).value<QVariantList>();
 	expenseList = jda.load(QDir::homePath() + QString("/user/expenses") + QString("_")
-					+ accountMap["accountID"].toString()
-					+ QString(".json")).value<QVariantList>();
+			+ accountMap["accountID"].toString()
+			+ QString(".json")).value<QVariantList>();
 
 	if (jda.hasError()) {
 		bb::data::DataAccessError error = jda.error();
