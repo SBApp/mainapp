@@ -111,7 +111,7 @@ void ListTest::loadLockScreen() {
 }
 
 void ListTest::checkDate() {
-	if (periodMap["budgetAmount"] != "0") {
+	if (periodMap["budgetAmount"] != "0") { //This may need to get changed, if a user has a period but no budget
 		//qDebug() << "Checking the date..";
 		QDate currentDate = QDate::currentDate();
 		QString currentDateStr = currentDate.toString("MM.dd.yyyy");
@@ -134,6 +134,7 @@ void ListTest::checkDate() {
 		} else if (comparedValue == currentDateStr) {
 			//qDebug() << "Today is past the end date";
 			newPeriod(endDateConverted);
+			//qDebug() << "After newPeriod";
 		} else if (comparedValue == "equal") {
 			//qDebug() << "Today is the end date";
 		}
@@ -462,7 +463,7 @@ void ListTest::setAccount(QVariant selectedAccount) {
 		fastUpdateListView();
 		updateBar();
 		//Update line graph signal
-		emit updateGraph(periodMap);
+		emit updateGraph(periodMap); //NOT SURE IF THIS NEEDS TO BE HERE
 
 		//Set budget dates
 		_budgetStartDate = periodMap["startDate"].toString();
@@ -631,6 +632,8 @@ void ListTest::setBudget(const QString &expenseAmount,
 			qDebug() << "Different budget type!";
 			//Updates previous periods
 			reformatPreviousPeriods(expenseAmountS, budgetType, startDate, endDate);
+			//Need to reverse the order of periodList, because it becomes backwards in the graph
+			reversePeriodList();
 		}
 	} else {
 		periodMap["budgetType"] = budgetType;
@@ -654,8 +657,20 @@ void ListTest::setBudget(const QString &expenseAmount,
 		fastUpdateListView();
 		updateBar();
 		//Update line graph signal
+		//What happens here is that the graph continues to add nodes between
+		//switching periods, instead of replacing
 		emit updateGraph(periodMap);
+		reloadWebView(); //JUST ADDED THIS
 	}
+}
+
+void ListTest::reversePeriodList() {
+	QVariantList reversedList;
+	while (!periodList.isEmpty()) {
+		reversedList.insert(0,periodList.front());
+		periodList.pop_front();
+	}
+	periodList = reversedList;
 }
 
 void ListTest::recalcBudget()
@@ -698,7 +713,7 @@ void ListTest::reformatPreviousPeriods(const QString &expenseAmount,
 	QVariantList reformatedPeriodList;
 	//Caller (setBudget) should deal with current period, you are only
 	//	dealing with the previous periods
-//Clear periodList
+	//Clear periodList
 	QVariantList emptyList;
 	periodList = emptyList;
 
@@ -1257,6 +1272,7 @@ void ListTest::updatePeriodView() {
 	periodMap = primaryPeriod.toMap();
 
 	periodModel->clear();
+	emit clearGraph(); //JUST ADDED THIS, MIGHT CAUSE ISSUES
 	periodModel->insertList(periodList);
 }
 
@@ -1962,13 +1978,16 @@ void ListTest::setUpAccountListModel() {
 void ListTest::removeExcessPeriod(QVariant excessPeriod) {
 	qDebug() << "Running remove excess period";
 	int excessPeriodIndex = periodList.indexOf(excessPeriod);
+	qDebug() << "excessPeriodIndex: " << excessPeriodIndex;
 	periodList.removeAt(excessPeriodIndex);
 
 	//Do you need a replace here??
-
-	saveJson();
+	savePeriods();
+	//saveJson();
 	updatePeriodView();
-	emit updateGraph(periodMap);
+	//emit updateGraph(periodMap);
+	reloadWebView(); //Might want to put this back
+	qDebug() << "isMain: " << periodMap["isMain"].toString();
 	qDebug() << "Period removed from JSON periodList";
 }
 

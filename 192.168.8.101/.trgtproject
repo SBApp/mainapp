@@ -2,13 +2,18 @@
 <trgtproject id="com.qnx.tools.ide.target.core.target">
     <data>
         <item id="com.qnx.tools.ide.target">
+            <last-device value="0x2AB29F9B"/>
             <qconnport value="8000"/>
+            <targettmpdir value="/var/tmp"/>
             <qconnguid value="65af523b-63be-4557-8e5f-96f8c2b8a70f"/>
             <conn-type value="WIFI"/>
+            <qconn>
+                <core>
+                    <show_warning value="true"/>
+                </core>
+            </qconn>
             <qconnostype value="nto"/>
             <qconnhostname value="192.168.8.101"/>
-            <last-device value="0x2AB29F9B"/>
-            <targettmpdir value="/var/tmp"/>
             <project>
                 <name value="192.168.8.101"/>
             </project>

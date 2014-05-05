@@ -148,6 +148,7 @@ public:
     		const QString &budgetType, const QString &startDate,
     		const QString &endDate, bool firstCall = false); //Recursive function
     void recalcBudget();
+    void reversePeriodList();
     QDate getNewStartDate(QDate oldStartDate);
     QDate getPreviousEndDate(const QString& prevStartDate);
     QDate getPreviousStartDate(const QString& prevStartDate, const QString& periodType);

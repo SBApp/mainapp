@@ -96,7 +96,7 @@ NavigationPane {
 				                         }
 				                         //Capping the number of periods tracked to 50, performance purpose
 				                         //When the settings page is added, have an option to change this
-				                         if (size() > 2) {
+				                         if (size() > 3) {
 				                             console.log("Size is greater than 50, removing oldest period.");
 				                             var removablePeriod = data(last());
                                              //removeAt(last());
