@@ -51,8 +51,10 @@ Container {
 	                     switchToList()
 	                     clearAdd()
 	                 } else if (titleName == "editPage") {
-	                     budgetApp.updateSelectedRecord(selectedItem, amountLabelEdit.text, expenseNameField.text == "" ? dropDown.selectedOption.text : expenseNameField.text,
-                                                           datePicker.value, dropDown.selectedValue)
+	                     budgetApp.updateSelectedRecord(selectedItem, amountLabelEdit.text, (expenseNameField.text == "General" || expenseNameField.text == "Restaurant" ||
+	                     																expenseNameField.text == "Groceries" || expenseNameField.text == "Gas" || expenseNameField.text == "Entertainment" ||
+	                     																expenseNameField.text == "Clothing" || expenseNameField.text == "School" || expenseNameField.text == "Medical" ||
+	                     																expenseNameField.text == "Housing" ? dropDown.selectedOption.text : expenseNameField.text), datePicker.value, dropDown.selectedValue)
                          switchToList()
                          nav.pop()
                          clearAdd()

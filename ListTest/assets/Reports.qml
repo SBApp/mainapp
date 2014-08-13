@@ -77,7 +77,8 @@ NavigationPane {
 				                     sortedAscending: false
 
 				                     onItemAdded: {
-				                         console.log("onItemAdded signal ran.")
+				                         console.log("onItemAdded signal ran: " + JSON.stringify(data))
+				                         console.log("data.last: " + JSON.stringify(data(last())))
 				                         var reportItem = data(indexPath);
 				                         console.log("reportItem.name: " + reportItem.budgetType);
 				                         //var indexP = (indexPath.length == 1) ? indexPath : indexPath[1]
@@ -96,15 +97,19 @@ NavigationPane {
 				                         }
 				                         //Capping the number of periods tracked to 50, performance purpose
 				                         //When the settings page is added, have an option to change this
+				                         /*
 				                         if (size() > 3) {
 				                             console.log("Size is greater than 50, removing oldest period.");
 				                             var removablePeriod = data(last());
                                              //removeAt(last());
                                              console.log("before remove excess period");
+                                             //THIS IS WHERE THE CRASH HAPPENS, AFTER THIS SCOPE
 				                             budgetApp.removeExcessPeriod(removablePeriod);
 				                             console.log("after remove excess period");
                                              //Send command here to C++ to delete removablePeriod from json files
 				                         }
+				                         */
+				                         console.log("After loop");
 				                     }
 				                 }
 				             listItemComponents: [

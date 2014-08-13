@@ -22,6 +22,7 @@ using namespace bb::cascades;
 using namespace bb::data;
 using namespace bb::platform;
 using namespace bb::cascades::advertisement;
+const int MAX_PERIODS = 3;
 
 ListTest::ListTest() {
 }
@@ -877,6 +878,11 @@ void ListTest::newPeriod(QString endDateStr) {
 	_budgetStartDate = periodMap["startDate"].toString();
 	_budgetEndDate = periodMap["endDate"].toString();
 
+	while (periodList.size() > MAX_PERIODS) {
+		qDebug() << "removing period";
+		periodList.pop_back();
+	}
+
 	addPeriodExpenses();
 	savePeriods();
 	//Clears previous ListView, in order to reload the ReportItems
@@ -1154,6 +1160,7 @@ void ListTest::fastUpdateListView() {
 			+ accountMap["accountID"].toString()
 			+ QString(".json")).value<QVariantList>();
 	QVariantList currentExpenseList = periodMap["expenses"].toList();
+	qDebug() << "fastUpdateListView called";
 	if (currentExpenseList.count() == 0) {
 		emit emptyExpenseList();
 	} else if (currentExpenseList.count() > 0) {
@@ -1169,6 +1176,7 @@ void ListTest::updateListView() {
 			+ QString(".json")).value<QVariantList>();
 	//Emit emptyExpenseList that will be caught by ListView in Transactions.qml
 	//In order to put a placeholder to encourage adding an expense
+	qDebug() << "updateListView called";
 	if (expenseList.count() == 0) {
 		emit emptyExpenseList();
 	} else if (expenseList.count() > 0) {
@@ -1273,7 +1281,9 @@ void ListTest::updatePeriodView() {
 
 	periodModel->clear();
 	emit clearGraph(); //JUST ADDED THIS, MIGHT CAUSE ISSUES
+	qDebug() << "about to insert into list";
 	periodModel->insertList(periodList);
+	qDebug() << "after insert into list";
 }
 
 void ListTest::updateAccountView() {
@@ -1976,7 +1986,7 @@ void ListTest::setUpAccountListModel() {
 }
 
 void ListTest::removeExcessPeriod(QVariant excessPeriod) {
-	qDebug() << "Running remove excess period";
+	qDebug() << "Running remove excess period:" + excessPeriod.toString();
 	int excessPeriodIndex = periodList.indexOf(excessPeriod);
 	qDebug() << "excessPeriodIndex: " << excessPeriodIndex;
 	periodList.removeAt(excessPeriodIndex);
@@ -2030,7 +2040,11 @@ void ListTest::setUpPeriodListModel() {
 
 	//periodModel = new GroupDataModel();
 	periodModel->setParent(this);
-	qDebug() << "Before insert list";
+	while (periodList.size() > MAX_PERIODS) {
+		qDebug() << "Removing a period";
+		periodList.pop_back();
+	}
+	qDebug() << "Before insert list:";
 	periodModel->insertList(periodList); // This line creates the errors.
 	qDebug() << "After inserting list";
 	periodModel->setGrouping(ItemGrouping::None);

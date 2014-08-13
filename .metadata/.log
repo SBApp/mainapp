@@ -4487,3 +4487,1541 @@ org.eclipse.debug.core.DebugException: Failed to delete launch configuration.
 
 !ENTRY org.eclipse.ui 4 4 2014-05-05 12:51:38.319
 !MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@603b4e} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@603b4e}
+
+!ENTRY org.eclipse.ui 4 4 2014-05-05 13:04:58.342
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@603b4e} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@603b4e}
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-05-05 13:05:02.840
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-05-05 13:05:04.369
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-05-05 13:05:05.875
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY org.eclipse.ui 4 4 2014-05-05 13:16:06.934
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@603b4e} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@603b4e}
+
+!ENTRY com.qnx.tools.ide.bbt.debug.ui 4 4 2014-05-05 13:16:30.535
+!MESSAGE Error streaming qDebug() messages from slogger2 to console
+!STACK 0
+java.lang.RuntimeException: Error streaming qDebug() messages from slogger2 to console
+	at com.qnx.tools.ide.bbt.debug.internal.ui.log.QDebugInjector.processEvent(QDebugInjector.java:86)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$1.run(Slog2Service.java:175)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service.fireEvent(Slog2Service.java:167)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:234)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.run(Slog2Service.java:205)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.read(Unknown Source)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:220)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:219)
+	... 1 more
+!SESSION 2014-08-03 11:12:39.309 -----------------------------------------------
+eclipse.buildId=trunk
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2014-08-03 11:12:43.947
+!MESSAGE Could not run processor
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:63)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:231)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:208)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:106)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.runProcessor(ModelAssembler.java:226)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.processModel(ModelAssembler.java:88)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:220)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:370)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:220)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:557)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.qnx.tools.ide.ui.e4.ToolbarInjectionProcessor.execute(ToolbarInjectionProcessor.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	... 26 more
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-03 12:07:38.708
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:08:22.601
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:08:24.286
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:08:26.040
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:08:27.813
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-03 12:09:04.210
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:27:49.976
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:27:51.538
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:27:53.080
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:27:56.165
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-03 12:27:58.557
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:28:19.533
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:28:21.092
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:28:22.592
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:28:25.651
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-03 12:28:27.856
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:53:18.552
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:53:20.074
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:53:21.611
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:53:24.717
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-03 12:53:26.990
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:55:31.382
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:55:32.906
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-03 12:55:34.448
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.ui 4 4 2014-08-03 13:34:37.363
+!MESSAGE Error streaming qDebug() messages from slogger2 to console
+!STACK 0
+java.lang.RuntimeException: Error streaming qDebug() messages from slogger2 to console
+	at com.qnx.tools.ide.bbt.debug.internal.ui.log.QDebugInjector.processEvent(QDebugInjector.java:86)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$1.run(Slog2Service.java:175)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service.fireEvent(Slog2Service.java:167)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:234)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.run(Slog2Service.java:205)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.read(Unknown Source)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:220)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:219)
+	... 1 more
+
+!ENTRY com.qnx.tools.ide.bbt.debug.ui 4 4 2014-08-03 13:34:37.364
+!MESSAGE Error streaming qDebug() messages from slogger2 to console
+!STACK 0
+java.lang.RuntimeException: Error streaming qDebug() messages from slogger2 to console
+	at com.qnx.tools.ide.bbt.debug.internal.ui.log.QDebugInjector.processEvent(QDebugInjector.java:86)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$1.run(Slog2Service.java:175)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service.fireEvent(Slog2Service.java:167)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:234)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.run(Slog2Service.java:205)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.read(Unknown Source)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:220)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:219)
+	... 1 more
+
+!ENTRY org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6662a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6662a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1d64a20,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1d64a20,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@19c8927,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@19c8927,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1f06879,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1f06879,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5afead,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5afead,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@62280,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@62280,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@c32b92,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@c32b92,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@16186d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@16186d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 01:22:50.801
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1db8be9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1db8be9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+
+!ENTRY org.eclipse.osgi 2 1 2014-08-04 02:04:10.261
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-08-04 02:04:10.262
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-08-04 02:04:10.262
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-08-04 02:04:10.263
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-08-04 02:04:10.263
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2014-08-04 02:04:10.263
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.jface 2 0 2014-08-04 02:04:17.404
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2014-08-04 02:04:17.404
+!MESSAGE A conflict occurred for HOME:
+Binding(HOME,
+	ParameterizedCommand(Command(org.eclipse.cdt.dsf.debug.ui.disassembly.commands.gotoPC,Go to Program Counter,
+		Navigate to current program counter,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@11868c3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.dsf.debug.ui.disassembly.context,,,system)
+Binding(HOME,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.goto.lineStart,Line Start,
+		Go to the start of the line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1861957,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-05 16:58:46.216
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-05 16:59:01.767
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-05 16:59:03.252
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-05 16:59:04.747
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-05 16:59:41.204
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY org.eclipse.ui 4 4 2014-08-05 17:00:37.763
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-05 17:18:37.154
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1}
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-05 17:19:25.489
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-05 17:19:27.024
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-05 17:19:28.537
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY org.eclipse.ui 4 4 2014-08-05 17:38:59.366
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-05 17:38:59.367
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1}
+
+!ENTRY com.qnx.tools.ide.bbt.debug.ui 4 4 2014-08-05 17:39:11.728
+!MESSAGE Error streaming qDebug() messages from slogger2 to console
+!STACK 0
+java.lang.RuntimeException: Error streaming qDebug() messages from slogger2 to console
+	at com.qnx.tools.ide.bbt.debug.internal.ui.log.QDebugInjector.processEvent(QDebugInjector.java:86)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$1.run(Slog2Service.java:175)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service.fireEvent(Slog2Service.java:167)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:234)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.run(Slog2Service.java:205)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.read(Unknown Source)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:220)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:219)
+	... 1 more
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 11:28:44.022
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 11:28:44.025
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1764fe1}
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:30:29.119
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:110)
+	at com.qnx.tools.ide.bbt.target.ui.internal.actions.ConnectBBTTargetAction$1.run(ConnectBBTTargetAction.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 8 -1 2014-08-06 11:30:29.122
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:30:29.130
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:110)
+	at com.qnx.tools.ide.bbt.target.ui.internal.actions.ConnectBBTTargetAction$1.run(ConnectBBTTargetAction.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 8 -1 2014-08-06 11:30:29.130
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+
+!ENTRY com.qnx.tools.ide.target.core 0 -1 2014-08-06 11:30:32.909
+!MESSAGE Error logged from Target Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Missing TargetProvider for key:[system]hostname/String
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getDataProvider(TargetModel.java:265)
+	at com.qnx.tools.ide.target.internal.core.model.TargetRefreshRequest.add(TargetRefreshRequest.java:339)
+	at com.qnx.tools.ide.target.internal.core.model.RefreshManager.createRefreshRequest(RefreshManager.java:87)
+	at com.qnx.tools.ide.target.internal.core.model.TargetDataElement.createRefreshRequest(TargetDataElement.java:190)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:301)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:291)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$4.run(NewTargetTreeContentProvider.java:410)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$1.run(NewTargetTreeContentProvider.java:362)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:158)
+	at com.qnx.tools.ide.target.ui.TargetPropertiesAction.run(TargetPropertiesAction.java:54)
+	at com.qnx.tools.ide.target.ui.AbstractTargetConfigurationBlock$5.widgetSelected(AbstractTargetConfigurationBlock.java:202)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1053)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-06 11:30:32.910
+!MESSAGE Missing TargetProvider for key:[system]hostname/String
+
+!ENTRY com.qnx.tools.ide.target.core 0 -1 2014-08-06 11:30:32.912
+!MESSAGE Error logged from Target Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Missing TargetProvider for key:[system]cpu.arch/String
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getDataProvider(TargetModel.java:265)
+	at com.qnx.tools.ide.target.internal.core.model.TargetRefreshRequest.add(TargetRefreshRequest.java:339)
+	at com.qnx.tools.ide.target.internal.core.model.RefreshManager.createRefreshRequest(RefreshManager.java:87)
+	at com.qnx.tools.ide.target.internal.core.model.TargetDataElement.createRefreshRequest(TargetDataElement.java:190)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:301)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:291)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$4.run(NewTargetTreeContentProvider.java:410)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$1.run(NewTargetTreeContentProvider.java:362)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:158)
+	at com.qnx.tools.ide.target.ui.TargetPropertiesAction.run(TargetPropertiesAction.java:54)
+	at com.qnx.tools.ide.target.ui.AbstractTargetConfigurationBlock$5.widgetSelected(AbstractTargetConfigurationBlock.java:202)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1053)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-06 11:30:32.914
+!MESSAGE Missing TargetProvider for key:[system]cpu.arch/String
+
+!ENTRY com.qnx.tools.ide.target.core 0 -1 2014-08-06 11:30:32.916
+!MESSAGE Error logged from Target Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Missing TargetProvider for key:[system]islittleendian/boolean
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getDataProvider(TargetModel.java:265)
+	at com.qnx.tools.ide.target.internal.core.model.TargetRefreshRequest.add(TargetRefreshRequest.java:339)
+	at com.qnx.tools.ide.target.internal.core.model.RefreshManager.createRefreshRequest(RefreshManager.java:87)
+	at com.qnx.tools.ide.target.internal.core.model.TargetDataElement.createRefreshRequest(TargetDataElement.java:190)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:301)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:291)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$4.run(NewTargetTreeContentProvider.java:410)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$1.run(NewTargetTreeContentProvider.java:362)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:158)
+	at com.qnx.tools.ide.target.ui.TargetPropertiesAction.run(TargetPropertiesAction.java:54)
+	at com.qnx.tools.ide.target.ui.AbstractTargetConfigurationBlock$5.widgetSelected(AbstractTargetConfigurationBlock.java:202)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1053)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-06 11:30:32.917
+!MESSAGE Missing TargetProvider for key:[system]islittleendian/boolean
+
+!ENTRY com.qnx.tools.ide.target.core 4 -1 2014-08-06 11:30:32.918
+!MESSAGE An Internal Error occurred while create refresh requests for connection: 192.168.8.101
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-06 11:30:32.918
+!MESSAGE Missing TargetProvider for key:[system]hostname/String
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-06 11:30:32.918
+!MESSAGE Missing TargetProvider for key:[system]cpu.arch/String
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-06 11:30:32.918
+!MESSAGE Missing TargetProvider for key:[system]islittleendian/boolean
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 11:31:11.335
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 11:31:22.707
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:31:24.880
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:31:26.986
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:31:29.385
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:31:33.993
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:31:38.646
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:31:42.039
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 11:48:30.155
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:49:15.005
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:49:18.126
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:49:19.998
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 11:49:50.877
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:50:10.721
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:50:14.345
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 11:50:16.742
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:06:00.264
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@3ce92} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@3ce92}
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:14:50.483
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:15:09.458
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:15:11.344
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:15:15.258
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:15:55.516
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.914
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.internal.ui.actions.SurroundWithTemplateMenuAction
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.914
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.CleanUp
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.915
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.SortMembers
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.916
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.FormatElement
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.916
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.Format
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.917
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.Indent
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.917
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.ShiftLeft
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.917
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.ShiftRight
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.918
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.AddJavaDocComment
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.918
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.RemoveBlockComment
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.918
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.AddBlockComment
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:37.919
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.ToggleComment
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:40.953
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:16:49.359
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:17:17.545
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:17:17.546
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:17:41.060
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:22:35.693
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:22:35.695
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:23:08.175
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:23:08.176
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:23:36.515
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:23:36.517
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:25:21.694
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:25:21.694
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:26:09.298
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:26:09.299
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@516e2c}
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:33:05.376
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:33:22.741
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:33:29.803
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:33:34.074
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:35:10.195
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:35:33.606
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:35:37.952
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:35:40.751
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:38:45.141
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:39:04.534
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:39:07.723
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:39:12.434
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 12:41:26.352
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1de5c5c} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@1de5c5c}
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:42:08.241
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:42:29.881
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:42:35.759
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:42:39.676
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:48:29.082
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:48:55.814
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:49:00.417
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:49:04.322
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:50:08.671
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2014-08-06 12:51:46.271
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@10a8d2c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2014-08-06 12:51:46.271
+!MESSAGE Context cannot be suspended.
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:52:17.264
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:52:21.049
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:52:23.781
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:52:26.849
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:52:30.568
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:52:31.753
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:52:34.813
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:53:07.034
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:53:09.256
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:53:11.352
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:53:13.236
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:53:33.517
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2014-08-06 12:54:00.531
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:54:26.799
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:54:29.729
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:54:33.413
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:54:35.372
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 12:54:38.022
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 12:55:24.860
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:06:28.321
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:06:31.326
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:06:33.227
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:06:37.151
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 13:06:44.360
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:08:19.828
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:08:22.668
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:08:25.635
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 13:08:52.700
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY org.eclipse.ui 4 4 2014-08-06 13:12:39.734
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.eof: {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@17f7110} vs {org.eclipse.debug.internal.ui.views.console.ProcessConsolePageParticipant$EOFHandler@17f7110}
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:16:14.340
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:16:18.088
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:16:21.466
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 13:18:44.000
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:19:30.491
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:19:33.756
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:19:37.459
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:19:41.146
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 13:19:47.737
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:23:02.055
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:23:16.597
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 13:26:02.471
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 14:05:22.632
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:06:04.322
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:06:06.025
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:06:07.561
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 14:06:13.892
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:06:34.348
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:06:35.841
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:06:37.367
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:06:40.458
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:06:43.597
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-06 14:06:47.985
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:07:43.369
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:07:45.123
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-06 14:07:46.701
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.ui 4 4 2014-08-06 14:08:10.700
+!MESSAGE Error streaming qDebug() messages from slogger2 to console
+!STACK 0
+java.lang.RuntimeException: Error streaming qDebug() messages from slogger2 to console
+	at com.qnx.tools.ide.bbt.debug.internal.ui.log.QDebugInjector.processEvent(QDebugInjector.java:86)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$1.run(Slog2Service.java:175)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service.fireEvent(Slog2Service.java:167)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:234)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.run(Slog2Service.java:205)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.read(Unknown Source)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:220)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:219)
+	... 1 more
+
+!ENTRY com.qnx.tools.ide.bbt.debug.ui 4 4 2014-08-06 14:08:10.700
+!MESSAGE Error streaming qDebug() messages from slogger2 to console
+!STACK 0
+java.lang.RuntimeException: Error streaming qDebug() messages from slogger2 to console
+	at com.qnx.tools.ide.bbt.debug.internal.ui.log.QDebugInjector.processEvent(QDebugInjector.java:86)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$1.run(Slog2Service.java:175)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service.fireEvent(Slog2Service.java:167)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:234)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.run(Slog2Service.java:205)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.read(Unknown Source)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:220)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:219)
+	... 1 more
+!SESSION 2014-08-11 20:29:19.133 -----------------------------------------------
+eclipse.buildId=trunk
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-08-11 20:29:23.306
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2014-08-11 20:29:24.494
+!MESSAGE Could not run processor
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:63)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:231)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:208)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:106)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.runProcessor(ModelAssembler.java:226)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.processModel(ModelAssembler.java:88)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:220)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:370)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:220)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:557)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.qnx.tools.ide.ui.e4.ToolbarInjectionProcessor.execute(ToolbarInjectionProcessor.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	... 26 more
+!SESSION 2014-08-11 23:22:26.334 -----------------------------------------------
+eclipse.buildId=trunk
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-08-11 23:22:30.520
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2014-08-11 23:22:31.691
+!MESSAGE Could not run processor
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:63)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:231)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:208)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:106)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.runProcessor(ModelAssembler.java:226)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.processModel(ModelAssembler.java:88)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:220)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:370)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:220)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:557)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.qnx.tools.ide.ui.e4.ToolbarInjectionProcessor.execute(ToolbarInjectionProcessor.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	... 26 more
+!SESSION 2014-08-12 17:55:08.542 -----------------------------------------------
+eclipse.buildId=trunk
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-08-12 17:55:11.526
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2014-08-12 17:55:12.626
+!MESSAGE Could not run processor
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:63)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:231)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:208)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:106)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.runProcessor(ModelAssembler.java:226)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.processModel(ModelAssembler.java:88)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:220)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:370)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:220)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:557)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.qnx.tools.ide.ui.e4.ToolbarInjectionProcessor.execute(ToolbarInjectionProcessor.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	... 26 more
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.585
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.internal.ui.actions.SurroundWithTemplateMenuAction
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.592
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.CleanUp
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.593
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.SortMembers
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.593
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.FormatElement
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.593
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.Format
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.593
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.Indent
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.594
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.ShiftLeft
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.594
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.ShiftRight
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.596
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.AddJavaDocComment
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.596
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.RemoveBlockComment
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.598
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.AddBlockComment
+
+!ENTRY org.eclipse.ui 4 4 2014-08-12 18:04:46.598
+!MESSAGE Plug-in 'org.eclipse.wst.jsdt.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.cdt.ui.source.menu' is invalid): org.eclipse.wst.jsdt.ui.actions.ToggleComment
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2014-08-12 18:15:16.686
+!MESSAGE Unable to connect: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+
+!ENTRY com.qnx.tools.ide.target.core 0 -1 2014-08-12 18:17:22.588
+!MESSAGE Error logged from Target Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Missing TargetProvider for key:[system]hostname/String
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getDataProvider(TargetModel.java:265)
+	at com.qnx.tools.ide.target.internal.core.model.TargetRefreshRequest.add(TargetRefreshRequest.java:339)
+	at com.qnx.tools.ide.target.internal.core.model.RefreshManager.createRefreshRequest(RefreshManager.java:87)
+	at com.qnx.tools.ide.target.internal.core.model.TargetDataElement.createRefreshRequest(TargetDataElement.java:190)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:301)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:291)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$4.run(NewTargetTreeContentProvider.java:410)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$1.run(NewTargetTreeContentProvider.java:362)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1053)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-12 18:17:22.590
+!MESSAGE Missing TargetProvider for key:[system]hostname/String
+
+!ENTRY com.qnx.tools.ide.target.core 0 -1 2014-08-12 18:17:22.592
+!MESSAGE Error logged from Target Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Missing TargetProvider for key:[system]cpu.arch/String
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getDataProvider(TargetModel.java:265)
+	at com.qnx.tools.ide.target.internal.core.model.TargetRefreshRequest.add(TargetRefreshRequest.java:339)
+	at com.qnx.tools.ide.target.internal.core.model.RefreshManager.createRefreshRequest(RefreshManager.java:87)
+	at com.qnx.tools.ide.target.internal.core.model.TargetDataElement.createRefreshRequest(TargetDataElement.java:190)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:301)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:291)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$4.run(NewTargetTreeContentProvider.java:410)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$1.run(NewTargetTreeContentProvider.java:362)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1053)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-12 18:17:22.592
+!MESSAGE Missing TargetProvider for key:[system]cpu.arch/String
+
+!ENTRY com.qnx.tools.ide.target.core 0 -1 2014-08-12 18:17:22.594
+!MESSAGE Error logged from Target Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Missing TargetProvider for key:[system]islittleendian/boolean
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getDataProvider(TargetModel.java:265)
+	at com.qnx.tools.ide.target.internal.core.model.TargetRefreshRequest.add(TargetRefreshRequest.java:339)
+	at com.qnx.tools.ide.target.internal.core.model.RefreshManager.createRefreshRequest(RefreshManager.java:87)
+	at com.qnx.tools.ide.target.internal.core.model.TargetDataElement.createRefreshRequest(TargetDataElement.java:190)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:301)
+	at com.qnx.tools.ide.target.internal.core.model.TargetModel.getSystem(TargetModel.java:291)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$4.run(NewTargetTreeContentProvider.java:410)
+	at com.qnx.tools.ide.target.ui.NewTargetTreeContentProvider$1.run(NewTargetTreeContentProvider.java:362)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4144)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1132)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:600)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:608)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:542)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1053)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-12 18:17:22.594
+!MESSAGE Missing TargetProvider for key:[system]islittleendian/boolean
+
+!ENTRY com.qnx.tools.ide.target.core 4 -1 2014-08-12 18:17:22.595
+!MESSAGE An Internal Error occurred while create refresh requests for connection: dhcp-v060-046.mobile.uci.edu
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-12 18:17:22.595
+!MESSAGE Missing TargetProvider for key:[system]hostname/String
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-12 18:17:22.595
+!MESSAGE Missing TargetProvider for key:[system]cpu.arch/String
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 -1 2014-08-12 18:17:22.595
+!MESSAGE Missing TargetProvider for key:[system]islittleendian/boolean
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 1 0 2014-08-12 18:17:53.161
+!MESSAGE CsDevelopmentSupportEnabled: false
+
+!ENTRY com.qnx.tools.ide.bbt.debug.ui 4 4 2014-08-12 18:49:27.318
+!MESSAGE Error streaming qDebug() messages from slogger2 to console
+!STACK 0
+java.lang.RuntimeException: Error streaming qDebug() messages from slogger2 to console
+	at com.qnx.tools.ide.bbt.debug.internal.ui.log.QDebugInjector.processEvent(QDebugInjector.java:86)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$1.run(Slog2Service.java:175)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service.fireEvent(Slog2Service.java:167)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:234)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.run(Slog2Service.java:205)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.read(Unknown Source)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:220)
+	at com.qnx.tools.ide.bbt.target.core.internal.log.Slog2Service$StreamingThread.processChunk(Slog2Service.java:219)
+	... 1 more
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-12 19:45:01.993
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-12 19:45:01.995
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2014-08-12 19:45:01.997
+!MESSAGE Unable to determine the application exit code
+!SESSION 2014-08-13 15:06:05.799 -----------------------------------------------
+eclipse.buildId=trunk
+java.version=1.6.0_43
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-08-13 15:06:08.601
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2014-08-13 15:06:10.196
+!MESSAGE Could not run processor
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:63)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:231)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:208)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:106)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.runProcessor(ModelAssembler.java:226)
+	at org.eclipse.e4.ui.internal.workbench.ModelAssembler.processModel(ModelAssembler.java:88)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:220)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:370)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:220)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:557)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at com.qnx.tools.ide.bbt.internal.ui.BBTApplication.start(BBTApplication.java:42)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+Caused by: java.lang.NullPointerException
+	at com.qnx.tools.ide.ui.e4.ToolbarInjectionProcessor.execute(ToolbarInjectionProcessor.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	... 26 more
