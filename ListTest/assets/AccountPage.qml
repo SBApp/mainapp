@@ -55,14 +55,15 @@ Page {
                     GroupDataModel {
                         id: accountModel
                         sortingKeys: ["isMain","accountID","accountName","accountBudget"]
-                        onItemAdded: {  console.log("Successfully added account.") }
+                        onItemAdded: {  //console.log("Successfully added account.") }
+                        }
                     }
                 ]
                 function callChangeAccountName(id, newName) {
                     budgetApp.changeAccountName(id, newName)   
                 }
                 function callDeleteAccount(id, prevIndex) {
-                    console.log("Calling delete account from QML")
+                    //console.log("Calling delete account from QML")
                     budgetApp.deleteAccount(id, prevIndex)   
                 }
                 function getBudgetType(id) {
@@ -82,7 +83,7 @@ Page {
                 verticalAlignment: VerticalAlignment.Bottom
                 
                 Banner {
-                    zoneId: 117145
+                    zoneId: 274487
                     preferredWidth: 300
                     preferredHeight: 50
                     horizontalAlignment: HorizontalAlignment.Center

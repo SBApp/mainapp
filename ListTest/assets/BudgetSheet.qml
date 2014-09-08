@@ -115,7 +115,7 @@ Sheet {
                    }
                    
                    onSelectedIndexChanged: {
-                       console.log("dropDownPeriod->onSelectedIndexChanged")
+                       //console.log("dropDownPeriod->onSelectedIndexChanged")
 	                   setPeriodDay(selectedValue)
                    }
                    
@@ -126,7 +126,7 @@ Sheet {
                        
                        onSelectedChanged: {
                            if (selected == true) {
-                               console.log("Monthly selected.")
+                               //console.log("Monthly selected.")
                            }
                        }
                    }
@@ -138,7 +138,7 @@ Sheet {
                        
                        onSelectedChanged: {
                            if (selected == true) {
-                               console.log("Weekly selected.")
+                               //console.log("Weekly selected.")
                            }
                        }
                    }
@@ -150,7 +150,7 @@ Sheet {
                        
                        onSelectedChanged: {
                            if (selected == true) {
-                               console.log("Biweekly selected.")
+                               //console.log("Biweekly selected.")
                            }
                        }
                    }
@@ -162,7 +162,7 @@ Sheet {
                        
                        onSelectedChanged: {
                            if (selected == true) {
-                               console.log("Daily selected.")
+                               //console.log("Daily selected.")
                            }
                        }
                    }
@@ -173,7 +173,7 @@ Sheet {
                        
                        onSelectedChanged: {
                            if (selected == true) {
-                               console.log("Yearly selected.")
+                               //console.log("Yearly selected.")
                            }
                        }
                    }
@@ -182,8 +182,8 @@ Sheet {
                       for (var i = 0; i < dropDownPeriod.options.length; i++) {
                           var o = dropDownPeriod.options[i];
                           if (o.value == newValue) {
-                              console.log("found match")
-                              console.log("indexOf(o) returns: " + indexOf(o))
+                              //console.log("found match")
+                              //console.log("indexOf(o) returns: " + indexOf(o))
                               dropDownPeriod.setSelectedIndex(indexOf(o));
                               return true;
                           }
@@ -209,7 +209,7 @@ Sheet {
                    }
                    
                    onValueChanged: {
-                       console.log("startDatePicker->onValueChanged")
+                       //console.log("startDatePicker->onValueChanged")
                        endDatePicker.setBudgetEndDate() 
                    }
                }
@@ -226,7 +226,7 @@ Sheet {
                        var startingDay = startDatePicker.value
                        var endingDay = startingDay
                        
-                       console.log("setBudgetEndDate->startDate: " + startingDay)
+                       //console.log("setBudgetEndDate->startDate: " + startingDay)
                        
                        if(budgetType == "monthly") {
                            if (endingDay.getMonth() == 12) {
@@ -238,9 +238,9 @@ Sheet {
                                endingDay = subtractDays(endingDay,1)
                            }
                        } else if (budgetType == "weekly") {
-                           console.log("setBudgetEndDate->endingDay before-> " + endingDay)
+                           //console.log("setBudgetEndDate->endingDay before-> " + endingDay)
                            endingDay = addDays(endingDay,6)
-                           console.log("setBudgetEndDate->endingDay after-> " + endingDay)
+                           //console.log("setBudgetEndDate->endingDay after-> " + endingDay)
                        } else if (budgetType == "biweekly") {
                            endingDay = addDays(endingDay,13)   
                        } else if (budgetType == "yearly") {
@@ -249,19 +249,19 @@ Sheet {
                        } else if (budgetType == "daily") {
                            //Starts same day it ends, so nothing changes
                        }
-                       console.log("Set end date: " + endingDay)
+                       //console.log("Set end date: " + endingDay)
                        
                        endDatePicker.value = Qt.formatDateTime(endingDay,'yyyy-MM-dd')
                    }
                    
                    function periodChanged(startDate) {
-                       console.log("periodChanged: " + startDate)
-                       console.log("||startDatePicker.value = " + startDatePicker.value + " ||startDate = " + startDate + " ||qtFormat = " + Qt.formatDateTime(startDate,'yyyy-MM-dd') + " ||qtFormatPicker = " + Qt.formatDateTime(startDatePicker.value,'yyyy-MM-dd'))
+                       //console.log("periodChanged: " + startDate)
+                       //console.log("||startDatePicker.value = " + startDatePicker.value + " ||startDate = " + startDate + " ||qtFormat = " + Qt.formatDateTime(startDate,'yyyy-MM-dd') + " ||qtFormatPicker = " + Qt.formatDateTime(startDatePicker.value,'yyyy-MM-dd'))
                        if (Qt.formatDateTime(startDatePicker.value, 'yyyy-MM-dd') == startDate) {   
-                           console.log("Running setBudgetEndDate()!!!!")
+                           //console.log("Running setBudgetEndDate()!!!!")
                            endDatePicker.setBudgetEndDate() 
                        } else {
-                           console.log("Attempting to set startDatePicker.value to: " + startDate)
+                           //console.log("Attempting to set startDatePicker.value to: " + startDate)
                            startDatePicker.value = startDate
                        }
                    }
@@ -279,7 +279,7 @@ Sheet {
                    
                    onFocusedChanged: {
                        if (focused) {
-                           console.log("Focused textfield!")
+                           //console.log("Focused textfield!")
                            text = "$0.00"
                        }
                        if (focused && !openedKeyboardBool) {
@@ -388,7 +388,7 @@ Sheet {
                currentDate.setDate(firstDayOfPeriod) 
            }
        } else if (periodType == "yearly") {
-           console.log("Read as yearly")
+           //console.log("Read as yearly")
            if (dayNum == 1 && monthNum == 0) {
                //It is the first day of the year
            } else {
@@ -417,7 +417,7 @@ Sheet {
    }
                    
    function subtractDays(myDate,days) {
-       console.log("myDate is: " + myDate)
+       //console.log("myDate is: " + myDate)
        var tempDate = new Date(myDate.getTime() - days*24*60*60*1000);
        var day = tempDate.getDate();
        var month = tempDate.getMonth();
@@ -433,7 +433,7 @@ Sheet {
    function setComponentValues() {
        currentBudget = budgetApp.getCurrentBudget()
        budgetField.text = "$" + addComma(currentBudget);
-       console.log("currentBudget: " + currentBudget)
+       //console.log("currentBudget: " + currentBudget)
        budgetType = budgetApp.budgetType
        dropDownPeriod.setDropDownOptionByValue(budgetType)
        var accountBudgetUsed = budgetApp.getUsedBudget()

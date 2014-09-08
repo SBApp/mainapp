@@ -133,16 +133,16 @@ Container {
 		onCreationCompleted: {
 		    //Send top 6 reportItems for points on the line graph
 		    if (reportItemContainer.ListItem.indexInSection < 6) {
-			    console.log("ReportItem created")
-			    console.log("indexInSection: " + reportItemContainer.ListItem.indexInSection)
+			    //console.log("ReportItem created")
+			    //console.log("indexInSection: " + reportItemContainer.ListItem.indexInSection)
 			    var tempGraph = []
 			    var qGraphMap = {}
 			    var amountSaved = parseFloat(ListItemData.budgetAmount) - parseFloat(ListItemData.budgetUsed)
 			    var startDate = ListItemData.endDate
 			    var shortDateArray = miniDate(startDate).split(" ")
 			    var shortDate = shortDateArray[0] + " " + shortDateArray[1]
-			    console.log("shortDate: " + shortDate)
-			    console.log("amountSaved: " + amountSaved)
+			    //console.log("shortDate: " + shortDate)
+			    //console.log("amountSaved: " + amountSaved)
 			    
 			    qGraphMap['months'] = shortDate;
 			    qGraphMap['value'] = amountSaved;
@@ -159,16 +159,16 @@ Container {
 		*/
 		
 		onControlAdded: {
-		    console.log("Control added!")   
+		    //console.log("Control added!")   
 		}
 		
 		onControlReplaced: {
-		    console.log("Control replaced!")   
+		    //console.log("Control replaced!")   
 		}
 		
 		onTouch: {   
 		    if (event.isDown()) {
-			    console.log("Fill pie page")
+			    //console.log("Fill pie page")
 			    var tempData = []
 			    var qMap = {}
 			    var intGeneral = 0
@@ -186,7 +186,7 @@ Container {
                 var iconArray = ["general","resteraunt","groceries","gas","entertainment","clothing","school","medical","housing"]
 			    
 			    if (ListItemData.expenses) {
-			        console.log("OG Expenses: " + ListItemData.expenses)
+			        //console.log("OG Expenses: " + ListItemData.expenses)
 			        var expenseList = ListItemData.expenses
 			    		for (var x=0;x<expenseList.length;x++) {
 			    		    for (var y=0;y<iconArray.length;y++) {
@@ -197,18 +197,18 @@ Container {
 			    		            qMap = {}
 			    		            //If there is no other instance of the category, create a qMap of it and push it onto the JSON Object
 			    		            if (valArray[y] == 1) {
-			    		                console.log("Adding new category, " + categoryArray[y])
+			    		                //console.log("Adding new category, " + categoryArray[y])
 			    		                qMap['category'] = categoryArray[y]
 			    		                qMap['value'] = expenseList[x].amount
-			    		                console.log("New value: " + qMap['value'])
+			    		                //console.log("New value: " + qMap['value'])
 			    		                tempData.push(qMap)
 			    		            } else {
-			    		                console.log("Category, " + categoryArray[y] + ", exists already. valArray[y]: " + valArray[y])
+			    		                //console.log("Category, " + categoryArray[y] + ", exists already. valArray[y]: " + valArray[y])
 			    		                //Since category already exists, find it in JSON object and update the value to new the incremented value
 			    		                for (var z=0;z<tempData.length;z++) {
 			    		                    if (tempData[z].category == categoryArray[y]) {
 			    		                        tempData[z].value = parseFloat(tempData[z].value) + parseFloat(expenseList[x].amount)
-			    		                        console.log("Summed value: " + tempData[z].value)
+			    		                        //console.log("Summed value: " + tempData[z].value)
 			    		                    }   
 			    		                }
 			    		            }
@@ -216,9 +216,9 @@ Container {
 			    		    }
 			    		}
 				   		reportItemContainer.ListItem.view.setPieDataArray(tempData)
-				   		console.log("Final length of categoryArray: " + tempData.length)
+				   		//console.log("Final length of categoryArray: " + tempData.length)
 				 } else {
-				     console.log("There are no expenses for this period")   
+				     //console.log("There are no expenses for this period")   
 				     reportItemContainer.ListItem.view.setPieDataArray(null)
 				 }
 		    }

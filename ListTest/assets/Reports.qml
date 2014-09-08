@@ -39,23 +39,23 @@ NavigationPane {
 	                
 	                onLoadingChanged: {
 	                    if (loadRequest.status == WebLoadStatus.Started) {
-	                        console.log("Load started.")
+	                        //console.log("Load started.")
 	                        //sendWebViewMessage()
 	                    } else if (loadRequest.status == WebLoadStatus.Succeeded) {
-	                        console.log("Load finished.")
+	                        //console.log("Load finished.")
 	                        //Connect the updateGraph signal called whenever the periods are modified to updating the graph and regenerating it
 					        budgetApp.updateGraph.connect(updateGraph)
 					        budgetApp.reloadWeb.connect(reloadWebView)
 					        budgetApp.clearGraphVar.connect(clearGraph)
-					        console.log("Finished getting data, sending Json array.")   
+					        //console.log("Finished getting data, sending Json array.")   
 					        sendWebViewMessage()
 	                    } else if (loadRequest.status == WebLoadStatus.Failed) {
-	                        console.log("Load failed.")
+	                        //console.log("Load failed.")
 	                    }   
 	               }
 	                			
 	                onMessageReceived: {
-	                    console.log("Message received: " + message.data)   
+	                    //console.log("Message received: " + message.data)   
 	                }
 	                
 	                function reloadWebView() {
@@ -77,39 +77,39 @@ NavigationPane {
 				                     sortedAscending: false
 
 				                     onItemAdded: {
-				                         console.log("onItemAdded signal ran: " + JSON.stringify(data))
-				                         console.log("data.last: " + JSON.stringify(data(last())))
+				                         //console.log("onItemAdded signal ran: " + JSON.stringify(data))
+				                         //console.log("data.last: " + JSON.stringify(data(last())))
 				                         var reportItem = data(indexPath);
-				                         console.log("reportItem.name: " + reportItem.budgetType);
+				                         //console.log("reportItem.name: " + reportItem.budgetType);
 				                         //var indexP = (indexPath.length == 1) ? indexPath : indexPath[1]
-				                         console.log("size: " + size());
+				                         //console.log("size: " + size());
 				                         
 				                         if(size() > 0 && size() < 7) {
-				                             console.log("Attempting to add to array")
+				                             //console.log("Attempting to add to array")
 				                             var qGraphMap = {}
 				                             var amountSaved = parseFloat(reportItem.budgetAmount) - parseFloat(reportItem.budgetUsed)
 				                             var endDate = smallDate(reportItem.endDate)
 				                             qGraphMap['months'] = endDate
 				                             qGraphMap['value'] = amountSaved
-				                             console.log("*qGraphMap.months: " + qGraphMap['months'])
-				                             console.log("*qGraphMap.value: " + qGraphMap['value'])
+				                             //console.log("*qGraphMap.months: " + qGraphMap['months'])
+				                             //console.log("*qGraphMap.value: " + qGraphMap['value'])
 				                             periodListView.pushGraphDataArray(qGraphMap)
 				                         }
 				                         //Capping the number of periods tracked to 50, performance purpose
 				                         //When the settings page is added, have an option to change this
 				                         /*
 				                         if (size() > 3) {
-				                             console.log("Size is greater than 50, removing oldest period.");
+				                             //console.log("Size is greater than 50, removing oldest period.");
 				                             var removablePeriod = data(last());
                                              //removeAt(last());
-                                             console.log("before remove excess period");
+                                             //console.log("before remove excess period");
                                              //THIS IS WHERE THE CRASH HAPPENS, AFTER THIS SCOPE
 				                             budgetApp.removeExcessPeriod(removablePeriod);
-				                             console.log("after remove excess period");
+				                             //console.log("after remove excess period");
                                              //Send command here to C++ to delete removablePeriod from json files
 				                         }
 				                         */
-				                         console.log("After loop");
+				                         //console.log("After loop");
 				                     }
 				                 }
 				             listItemComponents: [
@@ -140,7 +140,7 @@ NavigationPane {
 				                 selectedPeriod = dataModel.data(indexPath)
 				                 periodPage = periodPageDefinition.createObject()
 				                 Application.menuEnabled = false
-				                 console.log("dataArray before heading out: " + JSON.stringify(dataArray))
+				                 //console.log("dataArray before heading out: " + JSON.stringify(dataArray))
 					             periodPage.setArrayValue(dataArray)
 					             if (!dataArray) {
 					                 periodPage.showInfoToast()
@@ -149,7 +149,7 @@ NavigationPane {
 				             }
 				             
 				             function setPieDataArray(val) {
-				                 //console.log("Setting dataArray()..: " + JSON.stringify(val))
+				                 ////console.log("Setting dataArray()..: " + JSON.stringify(val))
 				                 dataArray = val   
 				             }
 				             
@@ -165,7 +165,7 @@ NavigationPane {
 					             if (arrayLength < 6) {
 						             tempJson.push(val)
 						             graphDataArray = JSON.stringify(tempJson)
-						             console.log("From pushGraphDataArray(): " + graphDataArray)
+						             //console.log("From pushGraphDataArray(): " + graphDataArray)
 						         }
 				             }
 				         }
@@ -175,7 +175,7 @@ NavigationPane {
 			         }  
 			         
 			         onCreationCompleted: {
-			             console.log("Creation of listview in reports page completed")
+			             //console.log("Creation of listview in reports page completed")
 			         }
 			     }
 		   }
@@ -185,7 +185,7 @@ NavigationPane {
 		       verticalAlignment: VerticalAlignment.Bottom
 		       
 		       Banner {
-		           zoneId: 117145
+                   zoneId: 274487
 		           preferredWidth: 300
 		           preferredHeight: 50
 		           horizontalAlignment: HorizontalAlignment.Center
@@ -201,9 +201,9 @@ NavigationPane {
    }
    
    function updateGraph(updatedMap) {
-       console.log("About to update graph in javascript")
-       console.log("updatedMap: " + updatedMap)
-       console.log("updatedMap.budgetAmount: " + updatedMap.budgetAmount)
+       //console.log("About to update graph in javascript")
+       //console.log("updatedMap: " + updatedMap)
+       //console.log("updatedMap.budgetAmount: " + updatedMap.budgetAmount)
        //Get newest period and resend data to graph
        sendWebViewUpdate(updatedMap)
    }
@@ -228,17 +228,17 @@ NavigationPane {
         }
     }
     function sendWebViewMessage() {
-        console.log("Sending out msg: " + "initial***" + graphDataArray)
+        //console.log("Sending out msg: " + "initial***" + graphDataArray)
         webView.postMessage("initial***" + graphDataArray)   
     }
     
     function sendWebViewUpdate(updatedMap) {
-        console.log("Sending out msg: " + "update***" + updatedMap)
+        //console.log("Sending out msg: " + "update***" + updatedMap)
         webView.postMessage("update***" + updatedMap.budgetAmount + "^" + updatedMap.budgetUsed + "^" + smallDate(updatedMap.endDate))
     }
     
     function smallDate(date) {
-        console.log("smallDate: " + date);
+        //console.log("smallDate: " + date);
         var splitDate = date.split(".")
         
         if (splitDate[0] == "01")
@@ -281,19 +281,19 @@ NavigationPane {
     
    //Destroys the page that was pushed on selection
     onPopTransitionEnded: {
-        console.log("Transitioning off")
+        //console.log("Transitioning off")
         Application.menuEnabled = true
         if (page == periodPage) {
-            console.log("Destroying Period page")
+            //console.log("Destroying Period page")
             page.destroy()
         } else if (page == periodExpensesPage) {
-            console.log("Destroying Period expenses page")
+            //console.log("Destroying Period expenses page")
             page.destroy()  
         } else if (page == settingsPage) {
-            console.log("Destroying Settings page")
+            //console.log("Destroying Settings page")
             page.destroy() 
         } else if (page == accountPage) {
-            console.log("Destroying Accounts page")
+            //console.log("Destroying Accounts page")
             page.destroy()
         }
     }

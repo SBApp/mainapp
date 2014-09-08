@@ -1,5 +1,5 @@
-18:17:40 **** Incremental Build of configuration Device-Debug for project ListTest ****
-make -j4 Device-Debug 
+22:38:14 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
 C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
 make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
 C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
@@ -14,13 +14,13 @@ Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/Li
     Generated 0 translation(s) (0 finished and 0 unfinished)
     Ignored 6 untranslated source text(s)
 make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
-C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
 make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
-C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
 make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
 make[2]: Nothing to be done for `first'.
 make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
 make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
 
-18:17:41 Build Finished (took 1s.94ms)
+22:38:16 Build Finished (took 1s.237ms)
 

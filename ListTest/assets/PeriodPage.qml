@@ -36,18 +36,18 @@ Page {
 			
 			onLoadingChanged: {
 			    if (loadRequest.status == WebLoadStatus.Started) {
-                    console.log("Load started.")
+                    //console.log("Load started.")
                     //sendWebViewMessage()
                 } else if (loadRequest.status == WebLoadStatus.Succeeded) {
-                    console.log("Load finished.")
+                    //console.log("Load finished.")
                     sendWebViewMessage()
                 } else if (loadRequest.status == WebLoadStatus.Failed) {
-                    console.log("Load failed.")
+                    //console.log("Load failed.")
                 }   
 			}
 			
 			onMessageReceived: {
-			    console.log("Message received: " + message.data)   
+			    //console.log("Message received: " + message.data)   
 			}
         } 
 
@@ -128,7 +128,7 @@ Page {
     }
     
     function sendWebViewMessage() {
-        console.log("Sending out msg: " + JSON.stringify(dataArray))
+        //console.log("Sending out msg: " + JSON.stringify(dataArray))
         webView.postMessage(JSON.stringify(dataArray))   
         //Set the percentages
         legend.setPercentages()

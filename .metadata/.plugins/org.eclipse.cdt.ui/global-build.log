@@ -1481,3 +1481,1170 @@ make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListT
 make[2]: Nothing to be done for `first'.
 make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
 make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+15:32:55 **** Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'bool ListTest::verifyPin(const QString&)':
+../src/ListTest.cpp:352:2: error: expected primary-expression before '<<' token
+../src/ListTest.cpp: In member function 'void ListTest::saveAccountJson()':
+../src/ListTest.cpp:410:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:410:3: error: expected ';' before 'else'
+../src/ListTest.cpp: In member function 'void ListTest::savePeriods()':
+../src/ListTest.cpp:489:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:489:3: error: expected ';' before 'else'
+../src/ListTest.cpp: In member function 'void ListTest::saveExpenses()':
+../src/ListTest.cpp:510:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:510:3: error: expected ';' before 'else'
+../src/ListTest.cpp: In member function 'void ListTest::saveJson()':
+../src/ListTest.cpp:536:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:536:3: error: expected ';' before 'else'
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1443:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+../src/ListTest.cpp: In member function 'void ListTest::setUpPeriodListModel()':
+../src/ListTest.cpp:2017:5: error: expected primary-expression before '<<' token
+../src/ListTest.cpp:2026:2: error: expected primary-expression before 'else'
+../src/ListTest.cpp:2026:2: error: expected ';' before 'else'
+../src/ListTest.cpp:2036:14: error: 'primaryPeriod' was not declared in this scope
+cc: C:/bbndk/host_10_2_0_15/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/cc1plus caught signal 1
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: *** [o.le-v7-g/.obj/ListTest.o] Error 1
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: *** [debug] Error 2
+make: *** [Device-Debug] Error 2
+15:34:01 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/src/ListTest.cpp:400: Unbalanced opening brace in C++ code (or abuse of the C++ preprocessor)
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::saveAccountJson()':
+../src/ListTest.cpp:420:53: error: a function-definition is not allowed here before '{' token
+../src/ListTest.cpp:2095:1: error: expected '}' at end of input
+cc: C:/bbndk/host_10_2_0_15/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/cc1plus caught signal 1
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: *** [o.le-v7-g/.obj/ListTest.o] Error 1
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: *** [debug] Error 2
+make: *** [Device-Debug] Error 2
+15:34:49 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::savePeriods()':
+../src/ListTest.cpp:490:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:490:3: error: expected ';' before 'else'
+../src/ListTest.cpp: In member function 'void ListTest::saveExpenses()':
+../src/ListTest.cpp:511:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:511:3: error: expected ';' before 'else'
+../src/ListTest.cpp: In member function 'void ListTest::saveJson()':
+../src/ListTest.cpp:537:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:537:3: error: expected ';' before 'else'
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1444:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+../src/ListTest.cpp: In member function 'void ListTest::setUpPeriodListModel()':
+../src/ListTest.cpp:2018:5: error: expected primary-expression before '<<' token
+../src/ListTest.cpp:2027:2: error: expected primary-expression before 'else'
+../src/ListTest.cpp:2027:2: error: expected ';' before 'else'
+../src/ListTest.cpp:2037:14: error: 'primaryPeriod' was not declared in this scope
+cc: C:/bbndk/host_10_2_0_15/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/cc1plus caught signal 1
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: *** [o.le-v7-g/.obj/ListTest.o] Error 1
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: *** [debug] Error 2
+make: *** [Device-Debug] Error 2
+15:36:00 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::savePeriods()':
+../src/ListTest.cpp:490:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:490:3: error: expected ';' before 'else'
+../src/ListTest.cpp: In member function 'void ListTest::saveJson()':
+../src/ListTest.cpp:538:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:538:3: error: expected ';' before 'else'
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1445:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+../src/ListTest.cpp: In member function 'void ListTest::setUpPeriodListModel()':
+../src/ListTest.cpp:2019:5: error: expected primary-expression before '<<' token
+cc: C:/bbndk/host_10_2_0_15/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/cc1plus caught signal 1
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: *** [o.le-v7-g/.obj/ListTest.o] Error 1
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: *** [debug] Error 2
+make: *** [Device-Debug] Error 2
+15:36:32 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::saveJson()':
+../src/ListTest.cpp:539:3: error: expected primary-expression before 'else'
+../src/ListTest.cpp:539:3: error: expected ';' before 'else'
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1446:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+../src/ListTest.cpp: In member function 'void ListTest::setUpPeriodListModel()':
+../src/ListTest.cpp:2020:5: error: expected primary-expression before '<<' token
+cc: C:/bbndk/host_10_2_0_15/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/cc1plus caught signal 1
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: *** [o.le-v7-g/.obj/ListTest.o] Error 1
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: *** [debug] Error 2
+make: *** [Device-Debug] Error 2
+15:37:18 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:852:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1447:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/ListTest o.le-v7-g/.obj/ListTest.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ListTest.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+17:02:04 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/ListTest.hpp -o o.le-v7/.moc/moc_ListTest.cpp
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/applicationui.hpp -o o.le-v7/.moc/moc_applicationui.cpp
+qcc -Vgcc_ntoarmv7le -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -x c++-header -c ../precompiled.h -o o.le-v7/.obj/ListTest.gch/c++
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ListTest.o ../src/ListTest.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/applicationui.o ../src/applicationui.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/main.o ../src/main.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_applicationui.o o.le-v7/.moc/moc_applicationui.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_ListTest.o o.le-v7/.moc/moc_ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:852:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1447:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+../src/main.cpp:15:6: warning: unused parameter 'type' [-Wunused-parameter]
+rm -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-O1 -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -Wl,-z,relro -Wl,-soname,ListTest.so -shared -Wl,-z,relro -Wl,-z,now -o libListTest.so.1.0.0 o.le-v7/.obj/ListTest.o o.le-v7/.obj/applicationui.o o.le-v7/.obj/main.o o.le-v7/.obj/moc_ListTest.o o.le-v7/.obj/moc_applicationui.o   -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps  
+ln -s libListTest.so.1.0.0 libListTest.so
+ln -s libListTest.so.1.0.0 libListTest.so.1
+ln -s libListTest.so.1.0.0 libListTest.so.1.0
+rm -f o.le-v7/libListTest.so.1.0.0
+rm -f o.le-v7/libListTest.so
+rm -f o.le-v7/libListTest.so.1
+rm -f o.le-v7/libListTest.so.1.0
+mv -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0 o.le-v7/
+echo && ntoarm-objcopy --only-keep-debug o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so.sym && ntoarm-objcopy --strip-all -R.ident --add-gnu-debuglink o.le-v7/ListTest.so.sym o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so
+
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+22:16:10 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:851:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1446:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+rm -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-O1 -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -Wl,-z,relro -Wl,-soname,ListTest.so -shared -Wl,-z,relro -Wl,-z,now -o libListTest.so.1.0.0 o.le-v7/.obj/ListTest.o o.le-v7/.obj/applicationui.o o.le-v7/.obj/main.o o.le-v7/.obj/moc_ListTest.o o.le-v7/.obj/moc_applicationui.o   -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps  
+ln -s libListTest.so.1.0.0 libListTest.so
+ln -s libListTest.so.1.0.0 libListTest.so.1
+ln -s libListTest.so.1.0.0 libListTest.so.1.0
+rm -f o.le-v7/libListTest.so.1.0.0
+rm -f o.le-v7/libListTest.so
+rm -f o.le-v7/libListTest.so.1
+rm -f o.le-v7/libListTest.so.1.0
+mv -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0 o.le-v7/
+echo && ntoarm-objcopy --only-keep-debug o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so.sym && ntoarm-objcopy --strip-all -R.ident --add-gnu-debuglink o.le-v7/ListTest.so.sym o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so
+
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:07:19 **** Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:851:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1446:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/ListTest o.le-v7-g/.obj/ListTest.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ListTest.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:11:31 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:14:44 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:15:57 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:18:11 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:23:55 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:30:26 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:31:20 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:33:02 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:43:26 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+08:53:36 **** Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:851:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1446:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/ListTest o.le-v7-g/.obj/ListTest.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ListTest.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+08:58:49 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:851:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1446:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+rm -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-O1 -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -Wl,-z,relro -Wl,-soname,ListTest.so -shared -Wl,-z,relro -Wl,-z,now -o libListTest.so.1.0.0 o.le-v7/.obj/ListTest.o o.le-v7/.obj/applicationui.o o.le-v7/.obj/main.o o.le-v7/.obj/moc_ListTest.o o.le-v7/.obj/moc_applicationui.o   -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps  
+ln -s libListTest.so.1.0.0 libListTest.so
+ln -s libListTest.so.1.0.0 libListTest.so.1
+ln -s libListTest.so.1.0.0 libListTest.so.1.0
+rm -f o.le-v7/libListTest.so.1.0.0
+rm -f o.le-v7/libListTest.so
+rm -f o.le-v7/libListTest.so.1
+rm -f o.le-v7/libListTest.so.1.0
+mv -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0 o.le-v7/
+echo && ntoarm-objcopy --only-keep-debug o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so.sym && ntoarm-objcopy --strip-all -R.ident --add-gnu-debuglink o.le-v7/ListTest.so.sym o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so
+
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+09:06:42 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:49:26 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:49:37 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:49:58 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:52:29 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:58:46 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+22:18:41 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+22:19:25 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+22:38:21 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+23:14:21 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+00:56:09 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+00:57:03 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+01:08:55 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+09:55:40 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:21:30 **** Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:865:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1460:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/ListTest o.le-v7-g/.obj/ListTest.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ListTest.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:34:09 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:865:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1460:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/ListTest o.le-v7-g/.obj/ListTest.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ListTest.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:46:36 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:873:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1471:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/ListTest o.le-v7-g/.obj/ListTest.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ListTest.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+21:59:09 **** Incremental Build of configuration Device-Debug for project ListTest ****
+make -j4 Device-Debug 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:872:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1475:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/ListTest o.le-v7-g/.obj/ListTest.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ListTest.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+22:03:41 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:872:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1475:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+rm -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-O1 -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -Wl,-z,relro -Wl,-soname,ListTest.so -shared -Wl,-z,relro -Wl,-z,now -o libListTest.so.1.0.0 o.le-v7/.obj/ListTest.o o.le-v7/.obj/applicationui.o o.le-v7/.obj/main.o o.le-v7/.obj/moc_ListTest.o o.le-v7/.obj/moc_applicationui.o   -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps  
+ln -s libListTest.so.1.0.0 libListTest.so
+ln -s libListTest.so.1.0.0 libListTest.so.1
+ln -s libListTest.so.1.0.0 libListTest.so.1.0
+rm -f o.le-v7/libListTest.so.1.0.0
+rm -f o.le-v7/libListTest.so
+rm -f o.le-v7/libListTest.so.1
+rm -f o.le-v7/libListTest.so.1.0
+mv -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0 o.le-v7/
+echo && ntoarm-objcopy --only-keep-debug o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so.sym && ntoarm-objcopy --strip-all -R.ident --add-gnu-debuglink o.le-v7/ListTest.so.sym o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so
+
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+22:14:17 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/ListTest -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../ListTest -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include -Ic:/bbndk/target_10_2_0_1155/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ListTest.o ../src/ListTest.cpp
+../src/ListTest.cpp: In member function 'void ListTest::newPeriod(QString)':
+../src/ListTest.cpp:861:8: warning: variable 'newStartDate' set but not used [-Wunused-but-set-variable]
+../src/ListTest.cpp: At global scope:
+../src/ListTest.cpp:1458:6: warning: unused parameter 'keyPressed' [-Wunused-parameter]
+rm -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -Wl,-O1 -Wl,-rpath-link,C:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -Wl,-z,relro -Wl,-soname,ListTest.so -shared -Wl,-z,relro -Wl,-z,now -o libListTest.so.1.0.0 o.le-v7/.obj/ListTest.o o.le-v7/.obj/applicationui.o o.le-v7/.obj/main.o o.le-v7/.obj/moc_ListTest.o o.le-v7/.obj/moc_applicationui.o   -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_2_0_1155/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_2_0_1155/qnx6//usr/lib/qt4/lib -lbbdata -lbbdevice -lbbsystem -lbbplatform -lbbcascadesadvertisement -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps  
+ln -s libListTest.so.1.0.0 libListTest.so
+ln -s libListTest.so.1.0.0 libListTest.so.1
+ln -s libListTest.so.1.0.0 libListTest.so.1.0
+rm -f o.le-v7/libListTest.so.1.0.0
+rm -f o.le-v7/libListTest.so
+rm -f o.le-v7/libListTest.so.1
+rm -f o.le-v7/libListTest.so.1.0
+mv -f libListTest.so.1.0.0 libListTest.so libListTest.so.1 libListTest.so.1.0 o.le-v7/
+echo && ntoarm-objcopy --only-keep-debug o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so.sym && ntoarm-objcopy --strip-all -R.ident --add-gnu-debuglink o.le-v7/ListTest.so.sym o.le-v7/libListTest.so.1.0.0 o.le-v7/ListTest.so
+
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+22:15:49 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+22:38:14 **** Incremental Build of configuration Device-Release for project ListTest ****
+make -j4 Device-Release 
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lupdate ListTest.pro
+C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/assets/js/graph.js:74: 
+Updating 'ListTest.ts'...
+    Found 6 source text(s) (0 new and 6 already existing)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/lrelease ListTest.pro
+Updating 'C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations/ListTest.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/translations'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+C:/bbndk/host_10_2_0_15/win32/x86/usr/bin/make -f Makefile.Release
+make[2]: Entering directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'
+make[1]: Leaving directory `C:/Users/DNShark/Documents/SnapBudget/mainapp/ListTest/arm'

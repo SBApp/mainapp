@@ -38,10 +38,10 @@ Container {
                  if (label.text != "Save") {
                      if (titleName == "addPage") {
                          var valueRec = "" + budgetApp.deleteDigitFromValue(amountLabel.text)
-                         console.log("Recieved value addPage: " + valueRec)
+                         //console.log("Recieved value addPage: " + valueRec)
                          amountLabel.text = valueRec;   
                      } else if (titleName == "editPage") {
-                         console.log("Recieved value editPage")
+                         //console.log("Recieved value editPage")
                          amountLabelEdit.text = "" + budgetApp.deleteDigitFromValue(amountLabelEdit.text)
                      }
                  } else {

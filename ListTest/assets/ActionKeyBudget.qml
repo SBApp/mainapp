@@ -38,9 +38,9 @@ Container {
                  var pageName = getPageName()
                  if (label.text != "Done") {
                      if (pageName == "budgetPage") {
-                         console.log("About to call the delete digit function");
+                         //console.log("About to call the delete digit function");
                          budgetField.text = budgetApp.deleteDigitFromValue(budgetField.text);
-                         console.log("Finished calling");
+                         //console.log("Finished calling");
                      } else if (pageName == "createAccountPage") {
                          budgetField.text = budgetApp.deleteDigitFromValue(budgetField.text);   
                      }

@@ -52,7 +52,7 @@ NavigationPane {
                         enabled: true
                         
                         onSelectedIndexChanged: {
-                            console.log("SelectedIndex was changed to " + selectedIndex)
+                            //console.log("SelectedIndex was changed to " + selectedIndex)
                         }
                         
                         Option {
@@ -62,7 +62,7 @@ NavigationPane {
                             
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("General selected.")
+                                    //console.log("General selected.")
                                 }
                             }
                         }
@@ -74,7 +74,7 @@ NavigationPane {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Restaurant selected.")
+                                    //console.log("Restaurant selected.")
                                 }
                             }
                         }
@@ -86,7 +86,7 @@ NavigationPane {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Groceries selected.")
+                                    //console.log("Groceries selected.")
                                 }
                             }
                         }
@@ -98,7 +98,7 @@ NavigationPane {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Gas selected.")
+                                    //console.log("Gas selected.")
                                 }
                             }
                         }
@@ -110,7 +110,7 @@ NavigationPane {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Entertainment selected.")
+                                    //console.log("Entertainment selected.")
                                 }
                             }
                         }
@@ -122,7 +122,7 @@ NavigationPane {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Clothing selected.")
+                                    //console.log("Clothing selected.")
                                 }
                             }
                         }
@@ -134,7 +134,7 @@ NavigationPane {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("School selected.")
+                                    //console.log("School selected.")
                                 }
                             }
                         }
@@ -146,7 +146,7 @@ NavigationPane {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Medical selected.")
+                                    //console.log("Medical selected.")
                                 }
                             }
                         }
@@ -158,7 +158,7 @@ NavigationPane {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Housing selected.")
+                                    //console.log("Housing selected.")
                                 }
                             }
                         }
@@ -224,10 +224,10 @@ function pushSettingPage() {
 //Destroys the page that was pushed on selection
  onPopTransitionEnded: {
      if (page == settingsPage) {
-         console.log("Destroying Settings page")
+         //console.log("Destroying Settings page")
          page.destroy() 
      } else if (page == accountPage) {
-         console.log("Destroying Accounts page")
+         //console.log("Destroying Accounts page")
          page.destroy()
      }
  }

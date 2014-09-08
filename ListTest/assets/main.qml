@@ -47,13 +47,13 @@ TabbedPane {
             onTriggered : {
                 if (mainTab.activeTab == expenseTab) {
 	               expensePage.pushSettingPage()
-	               console.log("Called expensePage push settings");
+	               //console.log("Called expensePage push settings");
 	           } else if (mainTab.activeTab == addTab) {
 	               addPage.pushSettingPage()
-	               console.log("Called addPage push settings");
+	               //console.log("Called addPage push settings");
 	           } else if (mainTab.activeTab == reportTab) {
 	               reportsPage.pushSettingPage()
-	               console.log("Called reportsPage push settings");
+	               //console.log("Called reportsPage push settings");
 	           }
 	        }
         }
@@ -82,13 +82,13 @@ TabbedPane {
               onTriggered : {
                   if (mainTab.activeTab == expenseTab) {
                       expensePage.pushSettingPage()
-                      console.log("Called expensePage push settings");
+                      //console.log("Called expensePage push settings");
                   } else if (mainTab.activeTab == addTab) {
                       addPage.pushSettingPage()
-                      console.log("Called addPage push settings");
+                      //console.log("Called addPage push settings");
                   } else if (mainTab.activeTab == reportTab) {
                       reportsPage.pushSettingPage()
-                      console.log("Called reportsPage push settings");
+                      //console.log("Called reportsPage push settings");
                   }
               }
           }, 
@@ -99,13 +99,13 @@ TabbedPane {
               onTriggered : {
                   if (mainTab.activeTab == expenseTab) {
                       expensePage.pushAccountPage()
-                      console.log("Called expensePage push account");
+                      //console.log("Called expensePage push account");
                   } else if (mainTab.activeTab == addTab) {
                       addPage.pushAccountPage()
-                      console.log("Called addPage push account");
+                      //console.log("Called addPage push account");
                   } else if (mainTab.activeTab == reportTab) {
                       reportsPage.pushAccountPage()
-                      console.log("Called reportsPage push account");
+                      //console.log("Called reportsPage push account");
                   }
               }
           }
@@ -113,17 +113,17 @@ TabbedPane {
        }
     
     function switchToList() {
-        console.log("Switching to main tab.");
+        //console.log("Switching to main tab.");
         mainTab.activeTab = expenseTab;
     }
     
     function switchToAdd() {
-        console.log("Switching to add tab.");
+        //console.log("Switching to add tab.");
         addPage.clearAdd();
         mainTab.activeTab = addTab;
     }
     
     onCreationCompleted: {
-        console.log("Creation completed");
+        //console.log("Creation completed");
     }
 }

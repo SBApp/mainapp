@@ -47,9 +47,9 @@ Page {
 		        text: "Email us!"
 
 		        onClicked: {
-		            console.log("Sending email")
+		            //console.log("Sending email")
 		            budgetApp.sendEmail()
-		            console.log("SENT")
+		            //console.log("SENT")
 		        }
 		    }
 		    
@@ -76,13 +76,13 @@ Page {
 		                id: invokeReview   
 		                query {
 		                    mimeType: "application/x-bb-appworld"
-		                    uri: "appworld://content//124432" //Change the number to your app id
+                            uri: "appworld://content//59936091" //Change the number to your app id
 		                }
 		            }
 		        ]
 		        
 		        onClicked: {
-		            console.log("Open review")
+		            //console.log("Open review")
 		            invokeReview.trigger("bb.action.OPEN")
 		        }
 		    }

@@ -73,9 +73,9 @@ Sheet {
     }
     
     function enableLock() {
-        console.log("Locking..")
+        //console.log("Locking..")
         lockSheetVerify.open()
-        console.log("Locked")
+        //console.log("Locked")
     }
     onOpened: {
         budgetApp.getCreateLabel()

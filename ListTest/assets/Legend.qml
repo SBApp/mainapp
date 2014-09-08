@@ -163,15 +163,15 @@ Container {
             imageRef[x].imageSource = "asset:///images/Legend/marker" + x + ".png"   
         }   
 
-        console.log("dataArray.length: " + dataArray.length)
+        //console.log("dataArray.length: " + dataArray.length)
          //Get sum of all numbers
         for (var i = 0; i < dataArray.length; i++) {
-            console.log("dataArray[i]: " + dataArray[i].value)
+            //console.log("dataArray[i]: " + dataArray[i].value)
             sum += parseFloat(dataArray[i].value);
         }   
-        console.log("Sum set to: " + sum)
+        //console.log("Sum set to: " + sum)
         
-        console.log("reads sum as: " + sum)
+        //console.log("reads sum as: " + sum)
         
         //Get percentage
         for (var j = 0; j < dataArray.length; j++) {

@@ -79,12 +79,12 @@ Page {
     }
     
     function getPageName() {
-	    console.log("Page is getting set as: " + titleName)
+	    //console.log("Page is getting set as: " + titleName)
 		return titleName
     }
     
     function shakeLock() {
-        console.log("SHAKE THE LOCK!!")
+        //console.log("SHAKE THE LOCK!!")
         shakeAnim.play()
     }
     
@@ -93,8 +93,8 @@ Page {
     }
     
     onCreationCompleted: {
-        console.log("creation completed")
-        console.log("after verifylabel")
+        //console.log("creation completed")
+        //console.log("after verifylabel")
         verifyLabel.text = ""
     }
     	

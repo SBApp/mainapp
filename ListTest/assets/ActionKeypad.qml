@@ -46,21 +46,21 @@ Container {
                      if (label.text == "Unlock") {
                          //Verify c++ function, if true..
                          if (budgetApp.verifyPin(verifyLabel.text)) {
-                             console.log("Pin verified")
+                             //console.log("Pin verified")
                              if (isLockPage()) {
-                                 console.log("isLockPage")
+                                 //console.log("isLockPage")
                                  budgetApp.lockApp("false")
-                                 console.log("set to false")
+                                 //console.log("set to false")
                                  verifyLabel.text = ""
-                                 console.log("text blanked")
+                                 //console.log("text blanked")
                                  if (budgetApp.loadQMLScene()) console.log("loaded **");
-                                 console.log("loaded le page")
+                                 //console.log("loaded le page")
                              } else {
-                                 console.log("is NOT lock page")
+                                 //console.log("is NOT lock page")
 		                         budgetApp.lockApp("false")
-                                 console.log("set to false")
+                                 //console.log("set to false")
 		                         verifyLabel.text = ""
-                                 console.log("text blanked")
+                                 //console.log("text blanked")
 		                         close()
 			                     switchToList()
 			                 }

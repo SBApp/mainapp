@@ -82,13 +82,13 @@ NavigationPane {
 	                            positionX: 56
 	                        }
 	                        onClicked: {
-	                            console.log("onClick event called")
-	                            console.log("Sheet attempting to be opened")
+	                            //console.log("onClick event called")
+	                            //console.log("Sheet attempting to be opened")
 	                            budgetSheet.open()
-	                            console.log("Setting component values")
+	                            //console.log("Setting component values")
 	                            budgetSheet.setComponentValues()
 	                            budgetApp.fillBudgetPage()
-	                            console.log("filled the budget Page")
+	                            //console.log("filled the budget Page")
 	                        }
 	                    }
 	                }
@@ -114,7 +114,7 @@ NavigationPane {
                                 ]
                                 sortedAscending: false
                                 onItemAdded: {
-                                    console.log("Successfully added item.")
+                                    //console.log("Successfully added item.")
                                 }
                                 onItemRemoved: {
                                     var lastIndexPath = last()
@@ -155,11 +155,11 @@ NavigationPane {
                             }
                             function createAddImage() {
                                 addContainer.visible = true;
-                                console.log("Will add image here");
+                                //console.log("Will add image here");
                             }
                             function deleteAddImage() {
                                 addContainer.visible = false;
-                            	console.log("Will delete add image here");
+                            	//console.log("Will delete add image here");
                             }
 	                    }
                     }
@@ -255,7 +255,7 @@ NavigationPane {
             verticalAlignment: VerticalAlignment.Bottom
             
             Banner {
-                zoneId: 117145
+                zoneId: 274487
                 preferredWidth: 300
                 preferredHeight: 50
                 horizontalAlignment: HorizontalAlignment.Center
@@ -281,7 +281,7 @@ NavigationPane {
             body: "Deleted Expense!"
             
             onPositionChanged: {
-                console.log("Position changed");
+                //console.log("Position changed");
                 deleteToast.resetPosition();
             }
         },
@@ -325,13 +325,13 @@ NavigationPane {
     onPopTransitionEnded: {
         Application.menuEnabled = true
         if (page == editPage) {
-            console.log("Destroying Edit Expense page")
+            //console.log("Destroying Edit Expense page")
             page.destroy()
         } else if (page == settingsPage) {
-            console.log("Destroying Settings page")
+            //console.log("Destroying Settings page")
             page.destroy()
         } else if (page == accountPage) {
-            console.log("Destroying Accounts page")
+            //console.log("Destroying Accounts page")
             page.destroy()
         }
     }

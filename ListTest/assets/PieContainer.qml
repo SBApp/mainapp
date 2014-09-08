@@ -18,7 +18,7 @@ WebView {
 	"</body></html>"
 	
 	onMessageReceived: {
-	    console.log(message.data)   
+	    //console.log(message.data)   
 	}
 } 
 

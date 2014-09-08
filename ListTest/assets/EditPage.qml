@@ -48,7 +48,7 @@ Page {
                         enabled: true
                          
                         onSelectedIndexChanged: {
-                            console.log("SelectedIndex was changed to " + selectedIndex)
+                            //console.log("SelectedIndex was changed to " + selectedIndex)
                         }
                         Option {
                             imageSource: "asset:///images/tabicons/general.png"
@@ -58,7 +58,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("General selected.")
+                                    //console.log("General selected.")
                                 }
                             }
                         }
@@ -71,7 +71,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Restaurant selected.")
+                                    //console.log("Restaurant selected.")
                                 }
                             }
                         }
@@ -84,7 +84,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Groceries selected.")
+                                    //console.log("Groceries selected.")
                                 }
                             }
                         }
@@ -97,7 +97,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Gas selected.")
+                                    //console.log("Gas selected.")
                                 }
                             }
                         }
@@ -110,7 +110,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Entertainment selected.")
+                                    //console.log("Entertainment selected.")
                                 }
                             }
                         }
@@ -123,7 +123,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Clothing selected.")
+                                    //console.log("Clothing selected.")
                                 }
                             }
                         }
@@ -136,7 +136,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("School selected.")
+                                    //console.log("School selected.")
                                 }
                             }
                         }
@@ -149,7 +149,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Medical selected.")
+                                    //console.log("Medical selected.")
                                 }
                             }
                         }
@@ -162,7 +162,7 @@ Page {
                          
                             onSelectedChanged: {
                                 if (selected == true) {
-                                    console.log("Housing selected.")
+                                    //console.log("Housing selected.")
                                 }
                             }
                         }
@@ -209,7 +209,7 @@ Page {
                      body: "Deleted Expense!"
                      
                      onPositionChanged: {
-                         console.log("Position changed");
+                         //console.log("Position changed");
                          deleteToast.resetPosition();
                      }
                  },
@@ -221,7 +221,7 @@ Page {
                      
                      onFinished: {
                          if (result == SystemUiResult.ConfirmButtonSelection) {
-                             console.log("Removing item.");
+                             //console.log("Removing item.");
                              nav.deleteExpenseToast();
                              budgetApp.deleteItemAtIndex(selectedItem);
                              nav.pop();
@@ -263,7 +263,7 @@ Page {
 	    	monthString = "12"
 	    	        	        	        
 	    returnString += splitString[2] + "-" + monthString + "-" + splitString[1]
-	    console.log("Converted date from " + prevDate + " to " + returnString)                       	        	        	        
+	    //console.log("Converted date from " + prevDate + " to " + returnString)                       	        	        	        
 	    return returnString
 	}
 	
@@ -274,7 +274,7 @@ Page {
   function clearAdd() {
       var theDate = new Date()
       budgetApp.clearEditAmountText()
-      console.log("Date: " + theDate + " || Qt: " + Qt.formatDateTime(setDate,'yyyy-MM-dd'))
+      //console.log("Date: " + theDate + " || Qt: " + Qt.formatDateTime(setDate,'yyyy-MM-dd'))
       dropDown.setSelectedIndex(0)
       expenseNameField.text = ""
       datePicker.value = Qt.formatDateTime(theDate,'yyyy-MM-dd')

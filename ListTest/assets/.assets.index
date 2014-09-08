@@ -1,5 +1,5 @@
 1
-123
+124
 AccountCreationSheet.qml
 accountinfo.xml
 AccountItem.qml
@@ -51,6 +51,7 @@ images/Legend/marker4.png
 images/Legend/marker5.png
 images/Legend/marker6.png
 images/Legend/marker7.png
+images/Legend/Thumbs.db
 images/loading.gif
 images/lockBig.png
 images/logo.png
